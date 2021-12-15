@@ -1,34 +1,7 @@
 # Angular Interview Questions & Answers
 
-> Click :star:if you like the project. Pull Request are highly appreciated. Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
 
 ---
-<div align="center">
-        <a href="https://www.fullstack.cafe/?utm_source=github&utm_medium=sud">
-            3600 Tech Interview Questions. <b>Answered</b>.
-            <div>
-                <img src="https://user-images.githubusercontent.com/13550565/76382460-cc784d80-6393-11ea-8837-2b89265ac853.png" width="150" alt="FullStack.Cafe">
-            </div>
-        </a>
-</div>
-
----
-<div align="center">
-    <p>
-        <a href="https://youtu.be/-jeoyDJDsSM">
-            25 Angular interview questions with answers video.
-            <div>
-                <img src="https://img.youtube.com/vi/-jeoyDJDsSM/0.jpg" width="150" height="100" alt="Angular">
-            </div>
-        </a>
-    </p>
-</div>
-
----
-
-## Downloading PDF/Epub formats
-
-You can download the PDF and Epub version of this repository from the latest run on the [actions tab](https://github.com/sudheerj/angular-interview-questions/actions).
 
 ### Table of Contents
 
@@ -45,21 +18,16 @@ You can download the PDF and Epub version of this repository from the latest run
 |9 | [What is a template?](#what-is-a-template)|
 |10| [What is a module?](#what-is-a-module)|
 |11| [What are lifecycle hooks available?](#what-are-lifecycle-hooks-available)|
-|12| [What is a data binding?](#what-is-a-data-binding)|
 |13| [What is metadata?](#what-is-metadata)|
 |14| [What is Angular CLI?](#what-is-angular-cli)|
 |15| [What is the difference between constructor and ngOnInit?](#what-is-the-difference-between-constructor-and-ngoninit)|
 |16| [What is a service](#what-is-a-service)|
 |17| [What is dependency injection in Angular?](#what-is-dependency-injection-in-angular)|
-|18| [How is Dependency Hierarchy formed?](#how-is-dependency-hierarchy-formed)|
 |19| [What is the purpose of async pipe?](#what-is-the-purpose-of-async-pipe)|
-|20| [What is the option to choose between inline and external template file?](#what-is-the-option-to-choose-between-inline-and-external-template-file)|
 |21| [What is the purpose of *ngFor directive?](#what-is-the-purpose-of-ngfor-directive)|
 |22| [What is the purpose of ngIf directive?](#what-is-the-purpose-of-ngif-directive)|
 |23| [What happens if you use script tag inside template?](#what-happens-if-you-use-script-tag-inside-template)|
 |24| [What is interpolation?](#what-is-interpolation)|
-|25| [What are template expressions?](#what-are-template-expressions)|
-|26| [What are template statements?](#what-are-template-statements)|
 |27| [How do you categorize data binding types?](#how-do-you-categorize-data-binding-types)|
 |28| [What are pipes?](#what-are-pipes)|
 |29| [What is a parameterized pipe?](#what-is-a-parameterized-pipe)|
@@ -333,7 +301,9 @@ You can download the PDF and Epub version of this repository from the latest run
   **[⬆ Back to Top](#table-of-contents)**
 
 3. ### What is TypeScript?
-    TypeScript is a typed superset of JavaScript created by Microsoft that adds optional types, classes, async/await, and many other features, and compiles to plain JavaScript. Angular built entirely in TypeScript and used as a primary language.
+    TypeScript is a typed superset of JavaScript created by Microsoft that adds optional types, classes, and many other features, and compiles to plain JavaScript.
+    It helps catch errors during development
+    Angular built entirely in TypeScript and used as a primary language.
     You can install it globally as
     ```cmd
     npm install -g typescript
@@ -362,7 +332,7 @@ You can download the PDF and Epub version of this repository from the latest run
     Angular has the below key components,
     1. **Component:** These are the basic building blocks of angular application to control HTML views.
     2. **Modules:** An angular module is set of angular basic building blocks like component, directives, services etc. An application is divided into logical pieces and each piece of code is called as "module" which perform a single task.
-    3. **Templates:** This represent the views of an Angular application.
+    3. **Templates:** This represents the views of an Angular application.
     4. **Services:** It is used to create components which can be shared across the entire application.
     5. **Metadata:** This can be used to add more data to an Angular class.
 
@@ -501,32 +471,6 @@ You can download the PDF and Epub version of this repository from the latest run
     6. **ngAfterViewInit:** This is called in response after Angular initializes the component's views and child views.
     7. **ngAfterViewChecked:** This is called in response after Angular checks the component's views and child views.
     8. **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-12. ### What is a data binding?
-    Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding(divided as 3 categories) which differ in the way the data is flowing.
-    1. **From the Component to the DOM:**
-
-        **Interpolation:** {{ value }}: Adds the value of a property from the component
-        ```html
-        <li>Name: {{ user.name }}</li>
-        <li>Address: {{ user.address }}</li>
-        ```
-        **Property binding:** [property]=”value”: The value is passed from the component to the specified property or simple HTML attribute
-        ```html
-        <input type="email" [value]="user.email">
-        ```
-    2. **From the DOM to the Component:**
-        **Event binding: (event)=”function”:** When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component
-        ```html
-        <button (click)="logout()"></button>
-        ```
-    3. **Two-way binding:**
-        **Two-way data binding:** [(ngModel)]=”value”: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync
-        ```html
-        <input type="email" [(ngModel)]="user.email">
-        ```
 
   **[⬆ Back to Top](#table-of-contents)**
 
@@ -674,10 +618,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
   **[⬆ Back to Top](#table-of-contents)**
 
-18. ### How is Dependency Hierarchy formed?
-
-  **[⬆ Back to Top](#table-of-contents)**
-
 19. ### What is the purpose of async pipe?
     The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.
 
@@ -693,16 +633,6 @@ You can download the PDF and Epub version of this repository from the latest run
         setInterval(() => observer.next(new Date().toString()), 2000)
       );
     }
-    ```
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-20. ### What is the option to choose between inline and external template file?
-    You can store your component's template in one of two places. You can define it inline using the **template** property, or you can define the template in a separate HTML file and link to it in the component metadata using the **@Component** decorator's **templateUrl** property.
-
-    The choice between inline and separate HTML is a matter of taste, circumstances, and organization policy. But normally we use inline template for small portion of code and external template file for bigger views. By default, the Angular CLI generates components with a template file. But you can override that with the below command,
-    ```
-    ng generate component hero -it
     ```
 
   **[⬆ Back to Top](#table-of-contents)**
@@ -753,41 +683,6 @@ You can download the PDF and Epub version of this repository from the latest run
     </h3>
     ```
     In the example above, Angular evaluates the title and url properties and fills in the blanks, first displaying a bold application title and then a URL.
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-25. ### What are template expressions?
-    A template expression produces a value similar to any Javascript expression. Angular executes the expression and assigns it to a property of a binding target; the target might be an HTML element, a component, or a directive. In the property binding, a template expression appears in quotes to the right of the = symbol as in [property]="expression".
-    In interpolation syntax, the template expression is surrounded by double curly braces. For example, in the below interpolation, the template expression is {{username}},
-
-    ```html
-    <h3>{{username}}, welcome to Angular</h3>
-    ```
-
-    The below javascript expressions are prohibited in template expression
-    1. assignments (=, +=, -=, ...)
-    2. new
-    3. chaining expressions with ; or ,
-    4. increment and decrement operators (++ and --)
-    ----------------------------------
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-26. ### What are template statements?
-    A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statements appear in quotes to the right of the = symbol like **(event)="statement"**.
-
-    Let's take an example of button click event's statement
-
-    ```html
-    <button (click)="editProfile()">Edit Profile</button>
-    ```
-    In the above expression, editProfile is a template statement. The below JavaScript syntax expressions are not allowed.
-    1. new
-    2. increment and decrement operators, ++ and --
-    3. operator assignment, such as += and -=
-    4. the bitwise operators | and &
-    5. the template expression operators
-    --------------------------------------
 
   **[⬆ Back to Top](#table-of-contents)**
 
