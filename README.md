@@ -32,11 +32,9 @@
 |28| [What are pipes?](#what-are-pipes)|
 |29| [What is a parameterized pipe?](#what-is-a-parameterized-pipe)|
 |30| [How do you chain pipes?](#how-do-you-chain-pipes)|
-|31| [What is a custom pipe?](#what-is-a-custom-pipe)|
 |32| [Give an example of custom pipe?](#give-an-example-of-custom-pipe)|
 |33| [What is the difference between pure and impure pipe?](#what-is-the-difference-between-pure-and-impure-pipe)|
 |34| [What is a bootstrapping module?](#what-is-a-bootstrapping-module)|
-|35| [What are observables?](#what-are-observables)|
 |36| [What is HttpClient and its benefits?](#what-is-httpclient-and-its-benefits)|
 |37| [Explain on how to use HttpClient with an example?](#explain-on-how-to-use-httpclient-with-an-example)|
 |38| [How can you read full response?](#how-can-you-read-full-response)|
@@ -53,7 +51,6 @@
 |49| [What are observable creation functions?](#what-are-observable-creation-functions)|
 |50| [What will happen if you do not supply handler for observer?](#what-will-happen-if-you-do-not-supply-handler-for-observer)|
 |51| [What are angular elements?](#what-are-angular-elements)|
-|52| [What is the browser support of Angular Elements?](#what-is-the-browser-support-of-angular-elements)|
 |53| [What are custom elements?](#what-are-custom-elements)|
 |54| [Do I need to bootstrap custom elements?](#do-i-need-to-bootstrap-custom-elements)|
 |55| [Explain how custom elements works internally?](#explain-how-custom-elements-works-internally)|
@@ -62,7 +59,6 @@
 |58| [How do you define typings for custom elements?](#how-do-you-define-typings-for-custom-elements)|
 |59| [What are dynamic components?](#what-are-dynamic-components)|
 |60| [What are the various kinds of directives?](#what-are-the-various-kinds-of-directives)|
-|61| [How do you create directives using CLI?](#how-do-you-create-directives-using-cli)|
 |62| [Give an example for attribute directives?](#give-an-example-for-attribute-directives)|
 |63| [What is Angular Router?](#what-is-angular-router)|
 |64| [What is the purpose of base href tag?](#what-is-the-purpose-of-base-href-tag)|
@@ -161,7 +157,6 @@
 |157| [What is the browser support for Angular?](#what-is-the-browser-support-for-angular)|
 |158| [What is schematic](#what-is-schematic)|
 |159| [What is rule in Schematics?](#what-is-rule-in-schematics)|
-|160| [What is Schematics CLI?](#what-is-schematics-cli)|
 |161| [What are the best practices for security in angular?](#what-are-the-best-practices-for-security-in-angular)|
 |162| [What is Angular security model for preventing XSS attacks?](#what-is-angular-security-model-for-preventing-xss-attacks)|
 |163| [What is the role of template compiler for prevention of XSS attacks?](#what-is-the-role-of-template-compiler-for-prevention-of-xss-attacks)|
@@ -179,32 +174,16 @@
 |175| [Is multiple interceptors supported in Angular?](#is-multiple-interceptors-supported-in-angular)|
 |176| [How can I use interceptor for an entire application?](#how-can-i-use-interceptor-for-an-entire-application)|
 |177| [How does Angular simplifies Internationalization?](#how-does-angular-simplifies-internationalization)|
-|178| [How do you manually register locale data?](#how-do-you-manually-register-locale-data)|
-|179| [What are the four phases of template translation?](#what-are-the-four-phases-of-template-translation)|
-|180| [What is the purpose of i18n attribute?](#what-is-the-purpose-of-i18n-attribute)|
-|181| [What is the purpose of custom id?](#what-is-the-purpose-of-custom-id)|
-|182| [What happens if the custom id is not unique?](#what-happens-if-the-custom-id-is-not-unique)|
-|183| [Can I translate text without creating an element?](#can-i-translate-text-without-creating-an-element)|
-|184| [How can I translate attribute?](#how-can-i-translate-attribute)|
-|185| [List down the pluralization categories?](#list-down-the-pluralization-categories)|
-|186| [What is select ICU expression?](#what-is-select-icu-expression)|
-|187| [How do you report missing translations?](#how-do-you-report-missing-translations)|
-|188| [How do you provide build configuration for multiple locales?](#how-do-you-provide-build-configuration-for-multiple-locales)|
-|189| [What is an angular library?](#what-is-an-angular-library)|
 |190| [What is AOT compiler?](#what-is-aot-compiler)|
 |191| [How do you select an element in component template?](#how-do-you-select-an-element-in-component-template)|
 |192| [What is TestBed?](#what-is-testbed)|
 |193| [What is protractor?](#what-is-protractor)|
 |194| [What is collection?](#what-is-collection)|
-|195| [How do you create schematics for libraries?](#how-do-you-create-schematics-for-libraries)|
-|196| [How do you use jquery in Angular?](#how-do-you-use-jquery-in-angular)|
 |197| [What is the reason for No provider for HTTP exception?](#what-is-the-reason-for-no-provider-for-http-exception)|
 |198| [What is router state?](#what-is-router-state)|
-|199| [How can I use SASS in angular project?](#how-can-i-use-sass-in-angular-project)|
 |200| [What is the purpose of hidden property?](#what-is-the-purpose-of-hidden-property)|
 |201| [What is the difference between ngIf and hidden property?](#what-is-the-difference-between-ngif-and-hidden-property)|
 |202| [What is slice pipe?](#what-is-slice-pipe)|
-|203| [What is index property in ngFor directive?](#what-is-index-property-in-ngfor-directive)|
 |204| [What is the purpose of ngFor trackBy?](#what-is-the-purpose-of-ngfor-trackby)|
 |205| [What is the purpose of ngSwitch directive?](#what-is-the-purpose-of-ngswitch-directive)|
 |206| [Is it possible to do aliasing for inputs and outputs?](#is-it-possible-to-do-aliasing-for-inputs-and-outputs)|
@@ -756,27 +735,6 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-31. ### What is a custom pipe?
-    Apart from built-inn pipes, you can write your own custom pipe with the below key characteristics,
-    1. A pipe is a class decorated with pipe metadata **@Pipe** decorator, which you import from the core Angular library
-       For example,
-        ```javascript
-            @Pipe({name: 'myCustomPipe'})
-        ```
-    2. The pipe class implements the **PipeTransform** interface's transform method that accepts an input value followed by optional parameters and returns the transformed value.
-       The structure of pipeTransform would be as below,
-        ```javascript
-        interface PipeTransform {
-          transform(value: any, ...args: any[]): any
-        }
-        ```
-    3. The @Pipe decorator allows you to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
-        ```javascript
-        template: `{{someInputValue | myCustomPipe: someOtherValue}}`
-        ```
-
-  **[⬆ Back to Top](#table-of-contents)**
-
 32. ### Give an example of custom pipe?
     You can create custom reusable pipes for the transformation of existing value. For example, let us create a custom pipe for finding file size based on an extension,
       ```javascript
@@ -801,6 +759,15 @@
 
 33. ### What is the difference between pure and impure pipe?
     A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. For example, any changes to a primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object). An impure pipe is called for every change detection cycle no matter whether the value or parameters changes. i.e, An impure pipe is called often, as often as every keystroke or mouse-move.
+	
+for Example (Pure pipe)
+ ```javascript
+	@Pipe({
+	  name: 'filterPipe', 
+	  pure: false/true        <----- here (default is `true`)
+	})
+	export class FilterPipe {}
+      ```
 
   **[⬆ Back to Top](#table-of-contents)**
 
@@ -831,11 +798,6 @@
         })
         export class AppModule { }
         ```
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-35. ### What are observables?
-    Observables are declarative which provide support for passing messages between publishers and subscribers in your application. They are mainly used for event handling, asynchronous programming, and handling multiple values. In this case, you define a function for publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the function completes, or until they unsubscribe.
 
   **[⬆ Back to Top](#table-of-contents)**
 
@@ -975,6 +937,8 @@
 42. ### What is an observable?
     An Observable is a unique Object similar to a Promise that can help manage async code. Observables are not part of the JavaScript language so we need to rely on a popular Observable library called RxJS.
     The observables are created using new keyword.
+	
+Observables are declarative which provide support for passing messages between publishers and subscribers in your application. They are mainly used for event handling, asynchronous programming, and handling multiple values. In this case, you define a function for publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the function completes, or until they unsubscribe.
 
     Let see the simple example of observable,
     ```javascript
@@ -1129,21 +1093,6 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-52. ### What is the browser support of Angular Elements?
-    Since Angular elements are packaged as custom elements the browser support of angular elements is same as custom elements support.
-
-    This feature is is currently supported natively in a number of browsers and pending for other browsers.
-
-    | Browser | Angular Element Support |
-    |---- | --------- |
-    | Chrome | Natively supported|
-    | Opera | Natively supported |
-    | Safari| Natively supported |
-    | Firefox | Natively supported from 63 version onwards. You need to enable dom.webcomponents.enabled and dom.webcomponents.customelements.enabled in older browsers |
-    | Edge| Currently it is in progress|
-
-  **[⬆ Back to Top](#table-of-contents)**
-
 53. ### What are custom elements?
     Custom elements (or Web Components) are a Web Platform feature which extends HTML by allowing you to define a tag whose content is created and controlled by JavaScript code. The browser maintains a `CustomElementRegistry` of defined custom elements, which maps an instantiable JavaScript class to an HTML tag. Currently this feature is supported by Chrome, Firefox, Opera, and Safari, and available in other browsers through polyfills.
 
@@ -1214,11 +1163,6 @@
     1. **Components** — These are directives with a template.
     2. **Structural directives** — These directives change the DOM layout by adding and removing DOM elements.
     3. **Attribute directives** — These directives change the appearance or behavior of an element, component, or another directive.
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-61. ### How do you create directives using CLI?
-    You can use CLI command `ng generate directive` to create the directive class file. It creates the source file(`src/app/components/directivename.directive.ts`), the respective test file(.spec.ts) and declare the directive class file in root module.
 
   **[⬆ Back to Top](#table-of-contents)**
 
@@ -2657,13 +2601,6 @@
 
      **[⬆ Back to Top](#table-of-contents)**
 
-160. ### What is Schematics CLI?
-     Schematics come with their own command-line tool known as Schematics CLI. It is used to install the schematics executable, which you can use to create a new schematics collection with an initial named schematic. The collection folder is a workspace for schematics. You can also use the schematics command to add a new schematic to an existing collection, or extend an existing schematic. You can install Schematic CLI globally as below,
-     ```bash
-     npm install -g @angular-devkit/schematics-cli
-     ```
-
-     **[⬆ Back to Top](#table-of-contents)**
 
 161. ### What are the best practices for security in angular?
      Below are the best practices of security in angular,
@@ -2888,194 +2825,6 @@
 
      **[⬆ Back to Top](#table-of-contents)**
 
-178. ### How do you manually register locale data?
-     By default, Angular only contains locale data for en-US which is English as spoken in the United States of America . But if you want to set to another locale, you must import locale data for that new locale. After that you can register using `registerLocaleData` method and the syntax of this method looks like below,
-     ```javascript
-     registerLocaleData(data: any, localeId?: any, extraData?: any): void
-     ```
-     For example, let us import German locale and register it in the application
-     ```javascript
-     import { registerLocaleData } from '@angular/common';
-     import localeDe from '@angular/common/locales/de';
-
-     registerLocaleData(localeDe, 'de');
-     ```
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-179. ### What are the four phases of template translation?
-     The i18n template translation process has four phases:
-
-     1. **Mark static text messages in your component templates for translation:** You can place i18n on every element tag whose fixed text is to be translated. For example, you need i18n attribue for heading as below,
-         ```javascript
-         <h1 i18n>Hello i18n!</h1>
-         ```
-
-     2. **Create a translation file:** Use the Angular CLI xi18n command to extract the marked text into an industry-standard translation source file. i.e, Open terminal window at the root of the app project and run the CLI command xi18n.
-         ```bash
-         ng xi18n
-         ```
-        The above command creates a file named `messages.xlf` in your project's root directory.
-
-        **Note:** You can supply command options to change the format, the name, the location, and the source locale of the extracted file.
-
-     3. **Edit the generated translation file:** Translate the extracted text into the target language. In this step, create a localization folder (such as `locale`)under root directory(src) and then create target language translation file by copying and renaming the default messages.xlf file. You need to copy source text node and provide the translation under target tag.
-         For example, create the translation file(messages.de.xlf) for German language
-         ```javascript
-         <trans-unit id="greetingHeader" datatype="html">
-           <source>Hello i18n!</source>
-           <target>Hallo i18n !</target>
-           <note priority="1" from="description">A welcome header for this sample</note>
-           <note priority="1" from="meaning">welcome message</note>
-         </trans-unit>
-         ```
-
-     4. **Merge the completed translation file into the app:** You need to use Angular CLI build command to compile the app, choosing a locale-specific configuration, or specifying the following command options.
-
-           1. --i18nFile=path to the translation file
-           2. --i18nFormat=format of the translation file
-           3. --i18nLocale= locale id
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-180. ### What is the purpose of i18n attribute?
-     The Angular i18n attribute marks translatable content. It is a custom attribute, recognized by Angular tools and compilers. The compiler removes it after translation.
-
-     **Note:** Remember that i18n is not an Angular directive.
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-181. ### What is the purpose of custom id?
-     When you change the translatable text, the Angular extractor tool generates a new id for that translation unit. Because of this behavior, you must then update the translation file with the new id every time.
-
-     For example, the translation file `messages.de.xlf.html` has generated trans-unit for some text message as below
-     ```html
-     <trans-unit id="827wwe104d3d69bf669f823jjde888" datatype="html">
-     ```
-     You can avoid this manual update of `id` attribute by specifying a custom id in the i18n attribute by using the prefix @@.
-     ```javascript
-     <h1 i18n="@@welcomeHeader">Hello i18n!</h1>
-     ```
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-182. ### What happens if the custom id is not unique?
-     You need to define custom ids as unique. If you use the same id for two different text messages then only the first one is extracted. But its translation is used in place of both original text messages.
-
-     For example, let's define same custom id `myCustomId` for two messages,
-     ```html
-     <h2 i18n="@@myCustomId">Good morning</h3>
-     <!-- ... -->
-     <h2 i18n="@@myCustomId">Good night</p>
-     ```
-     and the translation unit generated for first text in for German language as
-     ```html
-     <trans-unit id="myId" datatype="html">
-       <source>Good morning</source>
-       <target state="new">Guten Morgen</target>
-     </trans-unit>
-     ```
-     Since custom id is the same, both of the elements in the translation contain the same text as below
-     ```html
-     <h2>Guten Morgen</h2>
-     <h2>Guten Morgen</h2>
-     ```
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-183. ### Can I translate text without creating an element?
-     Yes, you can achieve using `<ng-container>` attribute. Normally you need to wrap a text content with i18n attribute for the translation. But if you don't want to create a new DOM element just for the sake of translation, you can wrap the text in an <ng-container> element.
-     ```html
-     <ng-container i18n>I'm not using any DOM element for translation</ng-container>
-     ```
-     Remember that `<ng-container>` is transformed into an html comment
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-184. ### How can I translate attribute?
-     You can translate attributes by attaching `i18n-x` attribute  where x is the name of the attribute to translate. For example, you can translate image title attribute as below,
-     ```html
-     <img [src]="example" i18n-title title="Internationlization" />
-     ```
-     By the way, you can also assign meaning, description and id with the i18n-x="<meaning>|<description>@@<id>" syntax.
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-185. ### List down the pluralization categories?
-     Pluralization has below categories depending on the language.
-     1. =0 (or any other number)
-     2. zero
-     3. one
-     4. two
-     5. few
-     6. many
-     7. other
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-186. ### What is select ICU expression?
-     ICU expression is is similar to the plural expressions except that you choose among alternative translations based on a string value instead of a number. Here you define those string values.
-
-     Let's take component binding with `residenceStatus` property which has "citizen", "permanent resident" and "foreigner" possible values and the message maps those values to the appropriate translations.
-     ```javascript
-     <span i18n>The person is {residenceStatus, select, citizen {citizen} permanent resident {permanentResident} foreigner {foreigner}}</span>
-     ```
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-187. ### How do you report missing translations?
-     By default, When translation is missing, it generates a warning message such as "Missing translation for message 'somekey'". But you can configure with a different level of message in Angular compiler as below,
-     1. **Error:** It throws an error. If you are using AOT compilation, the build will fail. But if you are using JIT compilation, the app will fail to load.
-     2. **Warning (default):** It shows a 'Missing translation' warning in the console or shell.
-     3. **Ignore:** It doesn't do anything.
-
-     If you use AOT compiler then you need to perform changes in `configurations` section of your Angular CLI configuration file, angular.json.
-     ```javascript
-     "configurations": {
-       ...
-       "de": {
-         ...
-         "i18nMissingTranslation": "error"
-       }
-     }
-     ```
-     If you use the JIT compiler, specify the warning level in the compiler config at bootstrap by adding the 'MissingTranslationStrategy' property as below,
-     ```javascript
-     import { MissingTranslationStrategy } from '@angular/core';
-     import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-     import { AppModule } from './app/app.module';
-
-     platformBrowserDynamic().bootstrapModule(AppModule, {
-       missingTranslation: MissingTranslationStrategy.Error,
-       providers: [
-         // ...
-       ]
-     });
-     ```
-     **[⬆ Back to Top](#table-of-contents)**
-188. ### How do you provide build configuration for multiple locales?
-     You can provide build configuration such as translation file path, name, format and application url in `configuration` settings of Angular.json file. For example, the German version of your application configured the build as follows,
-     ```javascript
-     "configurations": {
-       "de": {
-         "aot": true,
-         "outputPath": "dist/my-project-de/",
-         "baseHref": "/fr/",
-         "i18nFile": "src/locale/messages.de.xlf",
-         "i18nFormat": "xlf",
-         "i18nLocale": "de",
-         "i18nMissingTranslation": "error",
-       }
-     ```
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-189. ### What is an angular library?
-     An Angular library is an Angular project that differs from an app in that it cannot run on its own. It must be imported and used in an app. For example,  you can import or add `service worker` library to an Angular application which turns an application into a Progressive Web App (PWA).
-
-     **Note:** You can create own third party library and publish it as npm package to be used in an Application.
-
-     **[⬆ Back to Top](#table-of-contents)**
 
 190. ### What is AOT compiler?
      The AOT compiler is part of a build process that produces a small, fast, ready-to-run application package, typically for production. It converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code.
@@ -3110,56 +2859,6 @@
 
      **[⬆ Back to Top](#table-of-contents)**
 
-195. ### How do you create schematics for libraries?
-     You can create your own schematic collections to integrate your library with the Angular CLI. These collections are classified as 3 main schematics,
-     1. **Add schematics:** These schematics are used to install library in an Angular workspace using `ng add` command.
-        For example, @angular/material schematic tells the add command to install and set up Angular Material and theming.
-     2. **Generate schematics**: These schematics are used to modify projects, add configurations and scripts, and scaffold artifacts in library using `ng generate` command.
-        For example, @angular/material generation schematic supplies generation schematics for the UI components. Let's say the table component is generated using `ng generate @angular/material:table `.
-     3. **Update schematics:** These schematics are used to update library's dependencies and adjust for breaking changes in a new library release using `ng update` command.
-        For example, @angular/material update schematic updates material and cdk dependencies using `ng update @angular/material` command.
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-196. ### How do you use jquery in Angular?
-     You can use jquery in Angular using 3 simple steps,
-     1. **Install the dependency:** At first, install the jquery dependency using npm
-         ```cmd
-            npm install --save jquery
-         ```
-     2. **Add the jquery script:** In Angular-CLI project, add the relative path to jquery in the angular.json file.
-         ```javascript
-         "scripts": [
-            "node_modules/jquery/dist/jquery.min.js"
-         ]
-         ```
-     3. **Start using jquery:** Define the element in template. Whereas declare the jquery variable and apply CSS classes on the element.
-         ```html
-         <div id="elementId">
-           <h1>JQuery integration</h1>
-         </div>
-         ```
-         ```javascript
-         import {Component, OnInit} from '@angular/core';
-
-         declare var $: any; // (or) import * as $ from 'jquery';
-
-         @Component({
-           selector: 'app-root',
-           templateUrl: './app.component.html',
-           styleUrls: ['./app.component.css']
-         })
-         export class AppComponent implements OnInit {
-           ngOnInit(): void {
-             $(document).ready(() => {
-               $('#elementId').css({'text-color': 'blue', 'font-size': '150%'});
-             });
-           }
-         }
-         ```
-
-     **[⬆ Back to Top](#table-of-contents)**
-
 197. ### What is the reason for No provider for HTTP exception?
      This exception is due to missing HttpClientModule in your module. You just need to import in module as below,
      ```javascript
@@ -3188,17 +2887,6 @@
      ```
      You can access the current RouterState from anywhere in the Angular app using the Router service and the routerState property.
 
-     **[⬆ Back to Top](#table-of-contents)**
-
-199. ### How can I use SASS in angular project?
-     When you are creating your project with angular cli, you can use `ng new`command. It generates all your components with predefined sass files.
-     ```javascript
-     ng new My_New_Project --style=sass
-     ```
-     But if you are changing your existing style in your project then use `ng set` command,
-     ```javascript
-     ng set defaults.styleExt scss
-     ```
      **[⬆ Back to Top](#table-of-contents)**
 
 200. ### What is the purpose of hidden property?
@@ -3231,16 +2919,6 @@
      export class PipeListComponent {
        greeting: string[] = ['h', 'e', 'l', 'l', 'o', 'm','o', 'r', 'n', 'i', 'n', 'g'];
      }
-     ```
-
-     **[⬆ Back to Top](#table-of-contents)**
-
-203. ### What is index property in ngFor directive?
-     The index property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template.
-
-     For example, you can capture the index in a variable named indexVar and displays it with the todo's name using ngFor directive as below.
-     ```javascript
-     <div *ngFor="let todo of todos; let i=index">{{i + 1}} - {{todo.name}}</div>
      ```
 
      **[⬆ Back to Top](#table-of-contents)**
