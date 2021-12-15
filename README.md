@@ -24,6 +24,7 @@
 |16| [What is a service](#what-is-a-service)|
 |17| [What is dependency injection in Angular?](#what-is-dependency-injection-in-angular)|
 |19| [What is the purpose of async pipe?](#what-is-the-purpose-of-async-pipe)|
+|20| [What is the template variable](#what-is-the-purpose-of-async-pipe)|
 |21| [What is the purpose of *ngFor directive?](#what-is-the-purpose-of-ngfor-directive)|
 |22| [What is the purpose of ngIf directive?](#what-is-the-purpose-of-ngif-directive)|
 |23| [What happens if you use script tag inside template?](#what-happens-if-you-use-script-tag-inside-template)|
@@ -612,6 +613,25 @@
         setInterval(() => observer.next(new Date().toString()), 2000)
       );
     }
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+20. ### What is the template variable
+    При этом данную переменную мы можем использовать только внутри шаблона.
+
+Использование шаблонных переменных открывает нам дополнительный способ взаимодействия между родительским и дочерним компонентом.
+	
+    ```typescript
+	import { Component } from '@angular/core';
+
+	@Component({
+	    selector: 'my-app',
+	    template: `<child-comp #counter></child-comp>
+			<button (click)="counter.increment()">+</button>
+			<button (click)="counter.decrement()">-</button>`
+	})
+	export class AppComponent { }
     ```
 
   **[⬆ Back to Top](#table-of-contents)**
