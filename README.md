@@ -764,7 +764,7 @@ for Example (Pure pipe)
  ```javascript
 	@Pipe({
 	  name: 'filterPipe', 
-	  pure: false/true        <----- here (default is `true`)
+	  pure: false/true
 	})
 	export class FilterPipe {}
       ```
