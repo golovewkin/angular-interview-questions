@@ -63,6 +63,8 @@
 |62| [Give an example for attribute directives?](#give-an-example-for-attribute-directives)|
 |63| [What is Angular Router?](#what-is-angular-router)|
 |64| [What is the purpose of base href tag?](#what-is-the-purpose-of-base-href-tag)|
+|65| [What is HostListener?](#What-is-HostListener)|
+|66| [What is HostBinding?](#What-is-HostBinding)|
 |66| [What is router outlet?](#what-is-router-outlet)|
 |67| [What are router links?](#what-are-router-links)|
 |68| [What are active router links?](#what-are-active-router-links)|
@@ -1135,14 +1137,83 @@ Observables are declarative which provide support for passing messages between p
     ```
 
   **[⬆ Back to Top](#table-of-contents)**
+	
 
-66. ### What is router outlet?
-    The RouterOutlet is a directive from the router library and it  acts as a placeholder that marks the spot in the template where the router should display the components for that outlet. Router outlet is used like a component,
+65. ### What are active router links?
+    RouterLinkActive is a directive that toggles css classes for active RouterLink bindings based on the current RouterState. i.e, the Router will add CSS classes when this link is active and and remove when the link is inactive. For example, you can add them to RouterLinks as below
 
     ```html
+    <h1>Angular Router</h1>
+    <nav>
+      <a routerLink="/todosList" routerLinkActive="active">List of todos</a>
+      <a routerLink="/completed" routerLinkActive="active">Completed todos</a>
+    </nav>
     <router-outlet></router-outlet>
-    <!-- Routed components go here -->
     ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+
+66. ### what is HostListener ?
+Декоратор @HostListener позволяет связать события DOM и методы директивы. В частности, в декоратор передается название события, по которому будет вызываться метод. В данном случае мы привязываем события mouseenter (наведения указателя мыши на элемент) и mouseleave (уведение указателя мыши с элемента) к методу setFontWeight(), который устанавливает стилевое свойство font-weight у элемента. Если мы наводим на элемент, то устанавливается выделение жирным. При отводе мыши выделение сбрасывается.
+
+    ```typescript
+@Directive({
+    selector: '[bold]'
+})
+export class BoldDirective{
+     
+    constructor(private element: ElementRef, private renderer: Renderer2){
+         
+        this.renderer.setStyle(this.element.nativeElement, "cursor", "pointer");
+    }
+     
+    @HostListener("mouseenter") onMouseEnter() {
+        this.setFontWeight("bold");
+    }
+ 
+    @HostListener("mouseleave") onMouseLeave() {
+        this.setFontWeight("normal");
+    }
+ 
+    private setFontWeight(val: string) {
+        this.renderer.setStyle(this.element.nativeElement, "font-weight", val);
+    }
+}
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+	
+
+66. ### What is HostBinding?
+    HostBinding позволяет связать обычное свойство класса со свойством элемента, к которому применяется директива
+
+    ```typescript
+@Directive({
+    selector: '[bold]'
+})
+export class BoldDirective{
+     
+    private fontWeight = "normal";
+     
+    @HostBinding("style.fontWeight") get getFontWeight(){
+         
+        return this.fontWeight;
+    }
+     
+    @HostBinding("style.cursor") get getCursor(){
+        return "pointer";
+    }
+     
+    @HostListener("mouseenter") onMouseEnter() {
+        this.fontWeight ="bold";
+    }
+ 
+    @HostListener("mouseleave") onMouseLeave() {
+        this.fontWeight = "normal";
+    }
+    ```
+	Инструкция @HostBinding("style.fontWeight") get getFontWeight() связывает со свойством "style.fontWeight" значение, которое возвращается этим геттером getFontWeight. А он возвращает значение свойства fontWeight, которое также меняется при наведении указателя мыши.
 
   **[⬆ Back to Top](#table-of-contents)**
 
