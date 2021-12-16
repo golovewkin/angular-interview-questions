@@ -27,151 +27,151 @@
 |19| [What is the template variable](#what-is-the-purpose-of-async-pipe)|
 |20| [What is the purpose of *ngFor directive?](#what-is-the-purpose-of-ngfor-directive)|
 |21| [What is the purpose of ngIf directive?](#what-is-the-purpose-of-ngif-directive)|
-|23| [What happens if you use script tag inside template?](#what-happens-if-you-use-script-tag-inside-template)|
-|24| [What is interpolation?](#what-is-interpolation)|
-|27| [How do you categorize data binding types?](#how-do-you-categorize-data-binding-types)|
-|28| [What are pipes?](#what-are-pipes)|
-|29| [What is a parameterized pipe?](#what-is-a-parameterized-pipe)|
-|30| [How do you chain pipes?](#how-do-you-chain-pipes)|
-|32| [Give an example of custom pipe?](#give-an-example-of-custom-pipe)|
-|33| [What is the difference between pure and impure pipe?](#what-is-the-difference-between-pure-and-impure-pipe)|
-|34| [What is a bootstrapping module?](#what-is-a-bootstrapping-module)|
-|36| [What is HttpClient and its benefits?](#what-is-httpclient-and-its-benefits)|
-|37| [Explain on how to use HttpClient with an example?](#explain-on-how-to-use-httpclient-with-an-example)|
-|38| [How can you read full response?](#how-can-you-read-full-response)|
-|39| [How do you perform Error handling?](#how-do-you-perform-error-handling)|
-|40| [What is RxJS?](#what-is-rxjs)|
-|41| [What is subscribing?](#what-is-subscribing)|
-|42| [What is an observable?](#what-is-an-observable)|
-|43| [What is an observer?](#what-is-an-observer)|
-|44| [What is the difference between promise and observable?](#what-is-the-difference-between-promise-and-observable)|
-|45| [What is multicasting?](#what-is-multicasting)|
-|46| [How do you perform error handling in observables?](#how-do-you-perform-error-handling-in-observables)|
-|47| [What is the short hand notation for subscribe method?](#what-is-the-short-hand-notation-for-subscribe-method)|
-|48| [What are the utility functions provided by RxJS?](#what-are-the-utility-functions-provided-by-rxjs)|
-|49| [What are observable creation functions?](#what-are-observable-creation-functions)|
-|50| [What will happen if you do not supply handler for observer?](#what-will-happen-if-you-do-not-supply-handler-for-observer)|
-|51| [What are angular elements?](#what-are-angular-elements)|
-|53| [What are custom elements?](#what-are-custom-elements)|
-|54| [Do I need to bootstrap custom elements?](#do-i-need-to-bootstrap-custom-elements)|
-|55| [Explain how custom elements works internally?](#explain-how-custom-elements-works-internally)|
-|56| [How to transfer components to custom elements?](#how-to-transfer-components-to-custom-elements)|
-|57| [What are the mapping rules between Angular component and custom element?](#what-are-the-mapping-rules-between-angular-component-and-custom-element)|
-|58| [How do you define typings for custom elements?](#how-do-you-define-typings-for-custom-elements)|
-|59| [What are dynamic components?](#what-are-dynamic-components)|
-|60| [What are the various kinds of directives?](#what-are-the-various-kinds-of-directives)|
-|62| [Give an example for attribute directives?](#give-an-example-for-attribute-directives)|
-|63| [What is Angular Router?](#what-is-angular-router)|
-|64| [What is the purpose of base href tag?](#what-is-the-purpose-of-base-href-tag)|
-|65| [What is HostListener?](#What-is-HostListener)|
-|66| [What is HostBinding?](#What-is-HostBinding)|
-|66| [What is router outlet?](#what-is-router-outlet)|
-|67| [What are router links?](#what-are-router-links)|
-|68| [What are active router links?](#what-are-active-router-links)|
-|69| [What is router state?](#what-is-router-state)|
-|70| [What are router events?](#what-are-router-events)|
-|71| [What is activated route?](#what-is-activated-route)|
-|72| [How do you define routes?](#how-do-you-define-routes)|
-|73| [What is the purpose of Wildcard route?](#what-is-the-purpose-of-wildcard-route)|
-|74| [Do I need a Routing Module always?](#do-i-need-a-routing-module-always)|
-|75| [What is Angular Universal?](#what-is-angular-universal)|
-|76| [What are different types of compilation in Angular?](#what-are-different-types-of-compilation-in-angular)|
-|77| [What is JIT?](#what-is-jit)|
-|78| [What is AOT?](#what-is-aot)|
-|79| [Why do we need compilation process?](#why-do-we-need-compilation-process)|
-|80| [What are the advantages with AOT?](#what-are-the-advantages-with-aot)|
-|95| [What is Non null type assertion operator?](#what-is-non-null-type-assertion-operator)|
-|97| [How do you describe various dependencies in angular application?](#how-do-you-describe-various-dependencies-in-angular-application)|
-|98| [What is zone?](#what-is-zone)|
-|99| [What is the purpose of common module?](#what-is-the-purpose-of-common-module)|
-|100| [What is codelyzer?](#what-is-codelyzer)|
-|108| [What is a service worker and its role in Angular?](#what-is-a-service-worker-and-its-role-in-angular)|
-|109| [What are the design goals of service workers?](#what-are-the-design-goals-of-service-workers)|
-|110| [What are the differences between AngularJS and Angular with respect to dependency injection?](#what-are-the-differences-between-angularjs-and-angular-with-respect-to-dependency-injection)|
-|111| [What is Angular Ivy?](#what-is-angular-ivy)|
-|112| [What are the features included in ivy preview?](#what-are-the-features-included-in-ivy-preview)|
-|125| [What are the class decorators in Angular?](#what-are-the-class-decorators-in-angular)|
-|126| [What are class field decorators?](#what-are-class-field-decorators)|
-|127| [What is declarable in Angular?](#what-is-declarable-in-angular)|
-|128| [What are the restrictions on declarable classes?](#what-are-the-restrictions-on-declarable-classes)|
-|129| [What is a DI token?](#what-is-a-di-token)|
-|131| [What is an rxjs Subject?](#what-is-an-rxjs-Subject)|
-|132| [What is Bazel tool?](#what-is-bazel-tool)|
-|133| [What are the advantages of Bazel tool?](#what-are-the-advantages-of-bazel-tool)|
-|136| [What is platform in Angular?](#what-is-platform-in-angular)|
-|137| [What happens if I import the same module twice?](#what-happens-if-i-import-the-same-module-twice)|
-|138| [How do you select an element with in a component template?](#how-do-you-select-an-element-with-in-a-component-template)|
-|139| [How do you detect route change in Angular?](#how-do-you-detect-route-change-in-angular)|
-|140| [How do you pass headers for HTTP client?](#how-do-you-pass-headers-for-http-client)|
-|142| [Is Angular supports dynamic imports?](#is-angular-supports-dynamic-imports)|
-|151| [What are the ways to trigger change detection in Angular?](#what-are-the-ways-to-trigger-change-detection-in-angular)|
-|153| [What are the security principles in angular?](#what-are-the-security-principles-in-angular)|
-|158| [What is schematic](#what-is-schematic)|
-|161| [What are the best practices for security in angular?](#what-are-the-best-practices-for-security-in-angular)|
-|162| [What is Angular security model for preventing XSS attacks?](#what-is-angular-security-model-for-preventing-xss-attacks)|
-|163| [What is the role of template compiler for prevention of XSS attacks?](#what-is-the-role-of-template-compiler-for-prevention-of-xss-attacks)|
-|164| [What are the various security contexts in Angular?](#what-are-the-various-security-contexts-in-Angular)|
-|165| [What is Sanitization? Is angular supports it?](#what-is-sanitization?Is-angular-supports-it)|
-|166| [What is the purpose of innerHTML?](#what-is-the-purpose-of-innerhtml)|
-|167| [What is the difference between interpolated content and innerHTML?](#what-is-the-difference-between-interpolated-content-and-innerhtml)|
-|168| [How do you prevent automatic sanitization?](#how-do-you-prevent-automatic-sanitization)|
-|169| [Is safe to use direct DOM API methods in terms of security?](#is-safe-to-use-direct-dom-api-methods-in-terms-of-security)|
-|170| [What is DOM sanitizer?](#what-is-dom-sanitizer)|
-|171| [How do you support server side XSS protection in Angular application?](#how-do-you-support-server-side-xss-protection-in-angular-application)
-|172| [Is angular prevents http level vulnerabilities?](#is-angular-prevents-http-level-vulnerabilities)|
-|173| [What are Http Interceptors?](#what-are-http-interceptors)|
-|174| [What are the applications of HTTP interceptors?](#what-are-the-applications-of-http-interceptors)|
-|192| [What is TestBed?](#what-is-testbed)|
-|193| [What is protractor?](#what-is-protractor)|
-|198| [What is router state?](#what-is-router-state)|
-|201| [What is the difference between ngIf and hidden property?](#what-is-the-difference-between-ngif-and-hidden-property)|
-|202| [What is slice pipe?](#what-is-slice-pipe)|
-|204| [What is the purpose of ngFor trackBy?](#what-is-the-purpose-of-ngfor-trackby)|
-|205| [What is the purpose of ngSwitch directive?](#what-is-the-purpose-of-ngswitch-directive)|
-|207| [What is safe navigation operator?](#what-is-safe-navigation-operator)|
-|213| [What is an entry component?](#what-is-an-entry-component)|
-|214| [What is a bootstrapped component?](#what-is-a-bootstrapped-component)|
-|216| [Is it necessary for bootstrapped component to be entry component?](#is-it-necessary-for-bootstrapped-component-to-be-entry-component)|
-|217| [What is a routed entry component?](#what-is-a-routed-entry-component#)|
-|220| [Is it all components generated in production build?](#is-it-all-components-generated-in-production-build)|
-|224| [Give few examples for NgModules?](#give-few-examples-for-ngmodules)|
-|229| [What are the steps to use declaration elements?](#what-are-the-steps-to-use-declaration-elements)|
-|230| [What happens if browserModule used in feature module?](#what-happens-if-browsermodule-used-in-feature-module)|
-|231| [What are the types of feature modules?](#what-are-the-types-of-feature-modules)|
-|232| [What is a provider?](#what-is-a-provider)|
-|233| [What is the recommendation for provider scope?](#what-is-the-recommendation-for-provider-scope#)|
-|234| [How do you restrict provider scope to a module?](#how-do-you-restrict-provider-scope-to-a-module)|
-|235| [How do you provide a singleton service?](#how-do-you-provide-a-singleton-service)|
-|236| [What are the different ways to remove duplicate service registration?](#what-are-the-different-ways-to-remove-duplicate-service-registration)|
-|237| [How does forRoot method helpful to avoid duplicate router instances?](#how-does-forroot-method-helpful-to-avoid-duplicate-router-instances)|
-|238| [What is a shared module?](#what-is-a-shared-module)|
-|239| [Can I share services using modules?](#can-i-share-services-using-modules)|
-|243| [Wat is ngzone?](#what-is-ngzone)|
-|244| [What is NoopZone?](#what-is-noopzone)|
-|246| [What are the possible data change scenarios for change detection?](#what-are-the-possible-data-change-scenarios-for-change-detection)|
-|247| [What is a zone context?](#what-is-a-zone-context)|
-|249| [Which are the methods of NgZone used to control change detection?](#which-are-the-methods-of-ngzone-used-to-control-change-detection)|
-|252| [How do you configure injectors with providers at different levels?](#how-do-you-configure-injectors-with-providers-at-different-levels)|
-|253| [Is it mandatory to use injectable on every service class?](#is-it-mandatory-to-use-injectable-on-every-service-class)|
-|254| [What is an optional dependency?](#what-is-an-optional-dependency)|
-|255| [What are the types of injector hierarchies?](#what-are-the-types-of-injector-hierarchies)|
-|256| [What are reactive forms?](#what-are-reactive-forms)|
-|257| [What are dynamic forms?](#what-are-dynamic-forms)|
-|258| [What are template driven forms?](#what-are-template-driven-forms)|
-|259| [What are the differences between reactive forms and template driven forms?](#what-are-the-differences-between-reactive-forms-and-template-driven-forms)|
-|260| [What are the different ways to group form controls?](#what-are-the-different-ways-to-group-form-controls)|
-|261| [How do you update specific properties of a form model?](#how-do-you-update-specific-properties-of-a-form-model)|
-|262| [What is the purpose of FormBuilder?](#what-is-the-purpose-of-formbuilder)|
-|264| [What are the state CSS classes provided by ngModel?](#what-are-the-state-css-classes-provided-by-ngmodel)|
-|265| [How do you reset the form?](#how-do-you-reset-the-form)|
-|266| [What are the types of validator functions?](#what-are-the-types-of-validator-functions)|
-|267| [Can you give an example of built-in validators?](#can-you-give-an-example-of-built-in-validators)|
-|268| [How do you optimize the performance of async validators?](#how-do-you-optimize-the-performance-of-async-validators)|
-|270| [What is host property in css?](#what-is-host-property-in-css)|
-|271| [How do you get the current route?](#how-do-you-get-the-current-route)|
-|274| [](#)|
-|275| [](#)|
-|276| [](#)|
+|22| [What happens if you use script tag inside template?](#what-happens-if-you-use-script-tag-inside-template)|
+|23| [What is interpolation?](#what-is-interpolation)|
+|24| [How do you categorize data binding types?](#how-do-you-categorize-data-binding-types)|
+|25| [What are pipes?](#what-are-pipes)|
+|26| [What is a parameterized pipe?](#what-is-a-parameterized-pipe)|
+|27| [How do you chain pipes?](#how-do-you-chain-pipes)|
+|28| [Give an example of custom pipe?](#give-an-example-of-custom-pipe)|
+|29| [What is the difference between pure and impure pipe?](#what-is-the-difference-between-pure-and-impure-pipe)|
+|30| [What is a bootstrapping module?](#what-is-a-bootstrapping-module)|
+|31| [What is HttpClient and its benefits?](#what-is-httpclient-and-its-benefits)|
+|32| [Explain on how to use HttpClient with an example?](#explain-on-how-to-use-httpclient-with-an-example)|
+|33| [How can you read full response?](#how-can-you-read-full-response)|
+|34| [How do you perform Error handling?](#how-do-you-perform-error-handling)|
+|35| [What is RxJS?](#what-is-rxjs)|
+|36| [What is subscribing?](#what-is-subscribing)|
+|37| [What is an observable?](#what-is-an-observable)|
+|38| [What is an observer?](#what-is-an-observer)|
+|39| [What is the difference between promise and observable?](#what-is-the-difference-between-promise-and-observable)|
+|40| [What is multicasting?](#what-is-multicasting)|
+|41| [How do you perform error handling in observables?](#how-do-you-perform-error-handling-in-observables)|
+|42| [What is the short hand notation for subscribe method?](#what-is-the-short-hand-notation-for-subscribe-method)|
+|43| [What are the utility functions provided by RxJS?](#what-are-the-utility-functions-provided-by-rxjs)|
+|44| [What are observable creation functions?](#what-are-observable-creation-functions)|
+|45| [What will happen if you do not supply handler for observer?](#what-will-happen-if-you-do-not-supply-handler-for-observer)|
+|46| [What are angular elements?](#what-are-angular-elements)|
+|47| [What are custom elements?](#what-are-custom-elements)|
+|48| [Do I need to bootstrap custom elements?](#do-i-need-to-bootstrap-custom-elements)|
+|49| [Explain how custom elements works internally?](#explain-how-custom-elements-works-internally)|
+|50| [How to transfer components to custom elements?](#how-to-transfer-components-to-custom-elements)|
+|51| [What are the mapping rules between Angular component and custom element?](#what-are-the-mapping-rules-between-angular-component-and-custom-element)|
+|52| [How do you define typings for custom elements?](#how-do-you-define-typings-for-custom-elements)|
+|53| [What are dynamic components?](#what-are-dynamic-components)|
+|54| [What are the various kinds of directives?](#what-are-the-various-kinds-of-directives)|
+|55| [Give an example for attribute directives?](#give-an-example-for-attribute-directives)|
+|56| [What is Angular Router?](#what-is-angular-router)|
+|57| [What is the purpose of base href tag?](#what-is-the-purpose-of-base-href-tag)|
+|58| [What is HostListener?](#What-is-HostListener)|
+|59| [What is HostBinding?](#What-is-HostBinding)|
+|60| [What is router outlet?](#what-is-router-outlet)|
+|61| [What are router links?](#what-are-router-links)|
+|62| [What are active router links?](#what-are-active-router-links)|
+|63| [What is router state?](#what-is-router-state)|
+|64| [What are router events?](#what-are-router-events)|
+|65| [What is activated route?](#what-is-activated-route)|
+|66| [How do you define routes?](#how-do-you-define-routes)|
+|67| [What is the purpose of Wildcard route?](#what-is-the-purpose-of-wildcard-route)|
+|68| [Do I need a Routing Module always?](#do-i-need-a-routing-module-always)|
+|69| [What is Angular Universal?](#what-is-angular-universal)|
+|70| [What are different types of compilation in Angular?](#what-are-different-types-of-compilation-in-angular)|
+|71| [What is JIT?](#what-is-jit)|
+|72| [What is AOT?](#what-is-aot)|
+|73| [Why do we need compilation process?](#why-do-we-need-compilation-process)|
+|74| [What are the advantages with AOT?](#what-are-the-advantages-with-aot)|
+|75| [What is Non null type assertion operator?](#what-is-non-null-type-assertion-operator)|
+|76| [How do you describe various dependencies in angular application?](#how-do-you-describe-various-dependencies-in-angular-application)|
+|77| [What is zone?](#what-is-zone)|
+|78| [What is the purpose of common module?](#what-is-the-purpose-of-common-module)|
+|79| [What is codelyzer?](#what-is-codelyzer)|
+|80| [What is a service worker and its role in Angular?](#what-is-a-service-worker-and-its-role-in-angular)|
+|81| [What are the design goals of service workers?](#what-are-the-design-goals-of-service-workers)|
+|82| [What are the differences between AngularJS and Angular with respect to dependency injection?](#what-are-the-differences-between-angularjs-and-angular-with-respect-to-dependency-injection)|
+|83| [What is Angular Ivy?](#what-is-angular-ivy)|
+|84| [What are the features included in ivy preview?](#what-are-the-features-included-in-ivy-preview)|
+|85| [What are the class decorators in Angular?](#what-are-the-class-decorators-in-angular)|
+|86| [What are class field decorators?](#what-are-class-field-decorators)|
+|87| [What is declarable in Angular?](#what-is-declarable-in-angular)|
+|88| [What are the restrictions on declarable classes?](#what-are-the-restrictions-on-declarable-classes)|
+|89| [What is a DI token?](#what-is-a-di-token)|
+|90| [What is an rxjs Subject?](#what-is-an-rxjs-Subject)|
+|91| [What is Bazel tool?](#what-is-bazel-tool)|
+|92| [What are the advantages of Bazel tool?](#what-are-the-advantages-of-bazel-tool)|
+|93| [What is platform in Angular?](#what-is-platform-in-angular)|
+|94| [What happens if I import the same module twice?](#what-happens-if-i-import-the-same-module-twice)|
+|95| [How do you select an element with in a component template?](#how-do-you-select-an-element-with-in-a-component-template)|
+|96| [How do you detect route change in Angular?](#how-do-you-detect-route-change-in-angular)|
+|97| [How do you pass headers for HTTP client?](#how-do-you-pass-headers-for-http-client)|
+|98| [Is Angular supports dynamic imports?](#is-angular-supports-dynamic-imports)|
+|99| [What are the ways to trigger change detection in Angular?](#what-are-the-ways-to-trigger-change-detection-in-angular)|
+|100| [What are the security principles in angular?](#what-are-the-security-principles-in-angular)|
+|101| [What is schematic](#what-is-schematic)|
+|102| [What are the best practices for security in angular?](#what-are-the-best-practices-for-security-in-angular)|
+|103| [What is Angular security model for preventing XSS attacks?](#what-is-angular-security-model-for-preventing-xss-attacks)|
+|104| [What is the role of template compiler for prevention of XSS attacks?](#what-is-the-role-of-template-compiler-for-prevention-of-xss-attacks)|
+|105| [What are the various security contexts in Angular?](#what-are-the-various-security-contexts-in-Angular)|
+|106| [What is Sanitization? Is angular supports it?](#what-is-sanitization?Is-angular-supports-it)|
+|107| [What is the purpose of innerHTML?](#what-is-the-purpose-of-innerhtml)|
+|108| [What is the difference between interpolated content and innerHTML?](#what-is-the-difference-between-interpolated-content-and-innerhtml)|
+|109| [How do you prevent automatic sanitization?](#how-do-you-prevent-automatic-sanitization)|
+|110| [Is safe to use direct DOM API methods in terms of security?](#is-safe-to-use-direct-dom-api-methods-in-terms-of-security)|
+|111| [What is DOM sanitizer?](#what-is-dom-sanitizer)|
+|112| [How do you support server side XSS protection in Angular application?](#how-do-you-support-server-side-xss-protection-in-angular-application)
+|113| [Is angular prevents http level vulnerabilities?](#is-angular-prevents-http-level-vulnerabilities)|
+|114| [What are Http Interceptors?](#what-are-http-interceptors)|
+|115| [What are the applications of HTTP interceptors?](#what-are-the-applications-of-http-interceptors)|
+|116| [What is TestBed?](#what-is-testbed)|
+|117| [What is protractor?](#what-is-protractor)|
+|118| [What is router state?](#what-is-router-state)|
+|119| [What is the difference between ngIf and hidden property?](#what-is-the-difference-between-ngif-and-hidden-property)|
+|120| [What is slice pipe?](#what-is-slice-pipe)|
+|121| [What is the purpose of ngFor trackBy?](#what-is-the-purpose-of-ngfor-trackby)|
+|122| [What is the purpose of ngSwitch directive?](#what-is-the-purpose-of-ngswitch-directive)|
+|123| [What is safe navigation operator?](#what-is-safe-navigation-operator)|
+|124| [What is an entry component?](#what-is-an-entry-component)|
+|125| [What is a bootstrapped component?](#what-is-a-bootstrapped-component)|
+|126| [Is it necessary for bootstrapped component to be entry component?](#is-it-necessary-for-bootstrapped-component-to-be-entry-component)|
+|127| [What is a routed entry component?](#what-is-a-routed-entry-component#)|
+|128| [Is it all components generated in production build?](#is-it-all-components-generated-in-production-build)|
+|129| [Give few examples for NgModules?](#give-few-examples-for-ngmodules)|
+|130| [What are the steps to use declaration elements?](#what-are-the-steps-to-use-declaration-elements)|
+|131| [What happens if browserModule used in feature module?](#what-happens-if-browsermodule-used-in-feature-module)|
+|132| [What are the types of feature modules?](#what-are-the-types-of-feature-modules)|
+|133| [What is a provider?](#what-is-a-provider)|
+|134| [What is the recommendation for provider scope?](#what-is-the-recommendation-for-provider-scope#)|
+|135| [How do you restrict provider scope to a module?](#how-do-you-restrict-provider-scope-to-a-module)|
+|136| [How do you provide a singleton service?](#how-do-you-provide-a-singleton-service)|
+|137| [What are the different ways to remove duplicate service registration?](#what-are-the-different-ways-to-remove-duplicate-service-registration)|
+|138| [How does forRoot method helpful to avoid duplicate router instances?](#how-does-forroot-method-helpful-to-avoid-duplicate-router-instances)|
+|139| [What is a shared module?](#what-is-a-shared-module)|
+|140| [Can I share services using modules?](#can-i-share-services-using-modules)|
+|141| [Wat is ngzone?](#what-is-ngzone)|
+|142| [What is NoopZone?](#what-is-noopzone)|
+|143| [What are the possible data change scenarios for change detection?](#what-are-the-possible-data-change-scenarios-for-change-detection)|
+|144| [What is a zone context?](#what-is-a-zone-context)|
+|145| [Which are the methods of NgZone used to control change detection?](#which-are-the-methods-of-ngzone-used-to-control-change-detection)|
+|146| [How do you configure injectors with providers at different levels?](#how-do-you-configure-injectors-with-providers-at-different-levels)|
+|147| [Is it mandatory to use injectable on every service class?](#is-it-mandatory-to-use-injectable-on-every-service-class)|
+|148| [What is an optional dependency?](#what-is-an-optional-dependency)|
+|149| [What are the types of injector hierarchies?](#what-are-the-types-of-injector-hierarchies)|
+|150| [What are reactive forms?](#what-are-reactive-forms)|
+|151| [What are dynamic forms?](#what-are-dynamic-forms)|
+|152| [What are template driven forms?](#what-are-template-driven-forms)|
+|153| [What are the differences between reactive forms and template driven forms?](#what-are-the-differences-between-reactive-forms-and-template-driven-forms)|
+|154| [What are the different ways to group form controls?](#what-are-the-different-ways-to-group-form-controls)|
+|155| [How do you update specific properties of a form model?](#how-do-you-update-specific-properties-of-a-form-model)|
+|156| [What is the purpose of FormBuilder?](#what-is-the-purpose-of-formbuilder)|
+|157| [What are the state CSS classes provided by ngModel?](#what-are-the-state-css-classes-provided-by-ngmodel)|
+|158| [How do you reset the form?](#how-do-you-reset-the-form)|
+|159| [What are the types of validator functions?](#what-are-the-types-of-validator-functions)|
+|160| [Can you give an example of built-in validators?](#can-you-give-an-example-of-built-in-validators)|
+|161| [How do you optimize the performance of async validators?](#how-do-you-optimize-the-performance-of-async-validators)|
+|162| [What is host property in css?](#what-is-host-property-in-css)|
+|163| [How do you get the current route?](#how-do-you-get-the-current-route)|
+|164| [](#)|
+|165| [](#)|
+|166| [](#)|
 
 1. ### What is Angular Framework?
 
