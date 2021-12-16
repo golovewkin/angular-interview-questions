@@ -23,10 +23,10 @@
 |15| [What is the difference between constructor and ngOnInit?](#what-is-the-difference-between-constructor-and-ngoninit)|
 |16| [What is a service](#what-is-a-service)|
 |17| [What is dependency injection in Angular?](#what-is-dependency-injection-in-angular)|
-|19| [What is the purpose of async pipe?](#what-is-the-purpose-of-async-pipe)|
-|20| [What is the template variable](#what-is-the-purpose-of-async-pipe)|
-|21| [What is the purpose of *ngFor directive?](#what-is-the-purpose-of-ngfor-directive)|
-|22| [What is the purpose of ngIf directive?](#what-is-the-purpose-of-ngif-directive)|
+|18| [What is the purpose of async pipe?](#what-is-the-purpose-of-async-pipe)|
+|19| [What is the template variable](#what-is-the-purpose-of-async-pipe)|
+|20| [What is the purpose of *ngFor directive?](#what-is-the-purpose-of-ngfor-directive)|
+|21| [What is the purpose of ngIf directive?](#what-is-the-purpose-of-ngif-directive)|
 |23| [What happens if you use script tag inside template?](#what-happens-if-you-use-script-tag-inside-template)|
 |24| [What is interpolation?](#what-is-interpolation)|
 |27| [How do you categorize data binding types?](#how-do-you-categorize-data-binding-types)|
