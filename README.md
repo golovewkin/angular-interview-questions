@@ -1154,7 +1154,7 @@ Observables are declarative which provide support for passing messages between p
   **[⬆ Back to Top](#table-of-contents)**
 
 
-66. ### what is HostListener ?
+66. ### What is HostListener?
 Декоратор @HostListener позволяет связать события DOM и методы директивы. В частности, в декоратор передается название события, по которому будет вызываться метод. В данном случае мы привязываем события mouseenter (наведения указателя мыши на элемент) и mouseleave (уведение указателя мыши с элемента) к методу setFontWeight(), который устанавливает стилевое свойство font-weight у элемента. Если мы наводим на элемент, то устанавливается выделение жирным. При отводе мыши выделение сбрасывается.
 
     ```typescript
