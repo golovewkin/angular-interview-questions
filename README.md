@@ -367,7 +367,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-13. ### What is metadata?
+12. ### What is metadata?
     Metadata is used to decorate a class so that it can configure the expected behavior of the class. The metadata is represented by decorators
     1. **Class decorators**, e.g. @Component and @NgModule
         ```typescript
@@ -439,7 +439,7 @@
         ```
   **[⬆ Back to Top](#table-of-contents)**
 
-14. ### What is angular CLI?
+13. ### What is angular CLI?
     Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
     You need to install using below npm command,
     ```
@@ -462,7 +462,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-15. ### What is the difference between constructor and ngOnInit?
+14. ### What is the difference between constructor and ngOnInit?
     TypeScript classes has a default method called constructor which is normally used for the initialization purpose. Whereas ngOnInit method is specific to Angular, especially used to define Angular bindings. Even though constructor getting called first, it is preferred to move all of your Angular bindings to ngOnInit method.
     In order to use ngOnInit, you need to implement OnInit interface as below,
 
@@ -480,7 +480,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-16. ### What is a service?
+15. ### What is a service?
     A service is used when a common functionality needs to be provided to various modules. Services allow for greater separation of concerns for your application and better modularity by allowing you to extract common functionality out of components.
 
     Let's create a repoService which can be used across components,
@@ -506,7 +506,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-17. ### What is dependency injection in Angular?
+16. ### What is dependency injection in Angular?
     Dependency injection (DI), is an important application design pattern in which a class asks for dependencies from external sources rather than creating them itself. Angular comes with its own dependency injection framework for resolving dependencies( services or objects that a class needs to perform its function).So you can have your services depend on other services throughout your application.
 
   **[⬆ Back to Top](#table-of-contents)**
@@ -530,7 +530,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-20. ### What is the template variable
+17. ### What is the template variable
     При этом данную переменную мы можем использовать только внутри шаблона.
 
 Использование шаблонных переменных открывает нам дополнительный способ взаимодействия между родительским и дочерним компонентом.
@@ -549,7 +549,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-21. ### What is the purpose of ngFor directive?
+18. ### What is the purpose of ngFor directive?
     We use Angular ngFor directive in the template to display each item in the list. For example, here we iterate over list of users,
     ```html
     <li *ngFor="let user of users">
@@ -560,7 +560,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-22. ### What is the purpose of ngIf directive?
+19. ### What is the purpose of ngIf directive?
     Sometimes an app needs to display a view or a portion of a view only under specific circumstances. The Angular ngIf directive inserts or removes an element based on a truthy/falsy condition. Let's take an example to display a message if the user age is more than 18,
     ```html
     <p *ngIf="user.age > 18">You are not eligible for student pass!</p>
@@ -569,7 +569,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-23. ### What happens if you use script tag inside template?
+20. ### What happens if you use script tag inside template?
 
     Angular recognizes the value as unsafe and automatically sanitizes it, which removes the `script` tag but keeps safe content such as the text content of the `script` tag. This way it eliminates the risk of script injection attacks. If you still use it then it will be ignored and a warning appears in the browser console.
 
@@ -583,7 +583,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-24. ### What is interpolation?
+21. ### What is interpolation?
 
     Interpolation is a special syntax that Angular converts into property binding. It’s a convenient alternative to property binding. It is represented by double curly braces({{}}). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
 
@@ -598,7 +598,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-27. ### How do you categorize data binding types?
+22. ### How do you categorize data binding types?
 
      Binding types can be grouped into three categories distinguished by the direction of data flow. They are listed as below,
      1. From the source-to-view
@@ -615,7 +615,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-28. ### What are pipes?
+23. ### What are pipes?
     A pipe takes in data as input and transforms it to a desired output. For example, let us take a pipe to transform a component's birthday property into a human-friendly date using **date** pipe.
 
     ```javascript
@@ -632,7 +632,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-29. ### What is a parameterized pipe?
+24. ### What is a parameterized pipe?
     A pipe can accept any number of optional parameters to fine-tune its output. The parameterized pipe can be created by declaring the pipe name with a colon ( : ) and then the parameter value. If the pipe accepts multiple parameters, separate the values with colons. Let's take a birthday example with a particular format(dd/MM/yyyy):
 
     ```javascript
@@ -650,7 +650,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-30. ### How do you chain pipes?
+25. ### How do you chain pipes?
     You can chain pipes together in potentially useful combinations as per the needs. Let's take a birthday property which uses date pipe(along with parameter) and uppercase pipes as below
 
     ```javascript
@@ -668,7 +668,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-32. ### Give an example of custom pipe?
+26. ### Give an example of custom pipe?
     You can create custom reusable pipes for the transformation of existing value. For example, let us create a custom pipe for finding file size based on an extension,
       ```javascript
         import { Pipe, PipeTransform } from '@angular/core';
@@ -690,7 +690,7 @@
 
   **[⬆ Back to Top](#table-of-contents)**
 
-33. ### What is the difference between pure and impure pipe?
+27. ### What is the difference between pure and impure pipe?
     A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. For example, any changes to a primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object). An impure pipe is called for every change detection cycle no matter whether the value or parameters changes. i.e, An impure pipe is called often, as often as every keystroke or mouse-move.
 
 for Example (Pure pipe)
@@ -701,7 +701,7 @@ for Example (Pure pipe)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-34. ### What is a bootstrapping module?
+28. ### What is a bootstrapping module?
     Every application has at least one Angular module, the root module that you bootstrap to launch the application is called as bootstrapping module. It is commonly known as AppModule. The default structure of AppModule generated by AngularCLI would be as follows,
 
         ```javascript
@@ -731,7 +731,7 @@ for Example (Pure pipe)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-36. ### What is HttpClient and its benefits?
+29. ### What is HttpClient and its benefits?
     Most of the Front-end applications communicate with backend services over HTTP protocol using either XMLHttpRequest interface or the fetch() API. Angular provides a simplified client HTTP API known as **HttpClient** which is based on top of XMLHttpRequest interface. This client is avaialble from `@angular/common/http` package.
     You can import in your root module as below,
 
@@ -748,7 +748,7 @@ for Example (Pure pipe)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-38. ### How can you read full response?
+30. ### How can you read full response?
     The response body doesn't may not return full response data because sometimes servers also return special headers or status code which which are important for the application workflow. Inorder to get full response, you should use observe option from HttpClient,
 
     ```javascript
@@ -761,7 +761,7 @@ for Example (Pure pipe)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-39. ### How do you perform Error handling?
+31. ### How do you perform Error handling?
     If the request fails on the server or failed to reach the server due to network issues then HttpClient will return an error object instead of a successful reponse. In this case, you need to handle in the component by passing error object as a second callback to subscribe() method.
 
     Let's see how it can be handled in the component with an example,
@@ -778,7 +778,7 @@ for Example (Pure pipe)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-40. ### What is RxJS?
+32. ### What is RxJS?
     RxJS is a library for composing asynchronous and callback-based code in a functional, reactive style using Observables. Many APIs such as  HttpClient produce and consume RxJS Observables and also uses operators for processing observables.
 
     For example, you can import observables and operators for using HttpClient as below,
@@ -789,7 +789,7 @@ for Example (Pure pipe)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-41. ### What is subscribing?
+33. ### What is subscribing?
     An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the **subscribe()** method of the instance, passing an observer object to receive the notifications.
 
     Let's take an example of creating and subscribing to a simple observable, with an observer that logs the received message to the console.
@@ -816,7 +816,7 @@ for Example (Pure pipe)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-42. ### What is an observable?
+34. ### What is an observable?
     An Observable is a unique Object similar to a Promise that can help manage async code. Observables are not part of the JavaScript language so we need to rely on a popular Observable library called RxJS.
     The observables are created using new keyword.
 
@@ -835,7 +835,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-43. ### What is an observer?
+35. ### What is an observer?
     Observer is an interface for a consumer of push-based notifications delivered by an Observable. It has below structure,
 
     ```javascript
@@ -855,7 +855,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-44. ### What is the difference between promise and observable?
+36. ### What is the difference between promise and observable?
     Below are the list of differences between promise and observable,
 
        | Observable | Promise |
@@ -867,7 +867,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-45. ### What is multicasting?
+37. ### What is multicasting?
     Multi-casting is the practice of broadcasting to a list of multiple subscribers in a single execution.
 
     Let's demonstrate the multi-casting feature,
@@ -889,7 +889,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-46. ### How do you perform error handling in observables?
+38. ### How do you perform error handling in observables?
     You can handle errors by specifying an **error callback** on the observer instead of relying on try/catch which are ineffective in asynchronous environment.
 
     For example, you can define error callback as below,
@@ -902,7 +902,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-47. ### What is the short hand notation for subscribe method?
+39. ### What is the short hand notation for subscribe method?
     The subscribe() method can accept callback function definitions in line, for next, error, and complete handlers is known as short hand notation or Subscribe method with positional arguments.
 
     For example, you can define subscribe method as below,
@@ -916,7 +916,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-48. ### What are the utility functions provided by RxJS?
+40. ### What are the utility functions provided by RxJS?
     The RxJS library also provides below utility functions for creating and working with observables.
 
     1. Converting existing code for async operations into observables
@@ -927,7 +927,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-49. ### What are observable creation functions?
+41. ### What are observable creation functions?
     RxJS provides creation functions for the process of creating observables from things such as promises, events, timers and Ajax requests. Let us explain each of them with an example,
     1. Create an observable from a promise
         ```javascript
@@ -965,27 +965,27 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-50. ### What will happen if you do not supply handler for observer?
+42. ### What will happen if you do not supply handler for observer?
     Normally an observer object can define any combination of next, error and complete notification type handlers. If you don't supply a handler for a notification type, the observer just ignores notifications of that type.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-51. ### What are angular elements?
+43. ### What are angular elements?
     Angular elements are Angular components packaged as **custom elements**(a web standard for defining new HTML elements in a framework-agnostic way). Angular Elements hosts an Angular component, providing a bridge between the data and logic defined in the component and standard DOM APIs, thus, providing a way to use Angular components in `non-Angular environments`.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-53. ### What are custom elements?
+44. ### What are custom elements?
     Custom elements (or Web Components) are a Web Platform feature which extends HTML by allowing you to define a tag whose content is created and controlled by JavaScript code. The browser maintains a `CustomElementRegistry` of defined custom elements, which maps an instantiable JavaScript class to an HTML tag. Currently this feature is supported by Chrome, Firefox, Opera, and Safari, and available in other browsers through polyfills.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-54. ### Do I need to bootstrap custom elements?
+45. ### Do I need to bootstrap custom elements?
     No, custom elements bootstrap (or start) automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM. Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-55. ### Explain how custom elements works internally?
+46. ### Explain how custom elements works internally?
     Below are the steps in an order about custom elements functionality,
     1. **App registers custom element with browser:** Use the `createCustomElement()` function to convert a component into a class that can be registered with the browser as a custom element.
     2. **App adds custom element to DOM:**  Add custom element just like a built-in HTML element directly into the DOM.
@@ -997,7 +997,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-56. ### How to transfer components to custom elements?
+47. ### How to transfer components to custom elements?
     Transforming components to custom elements involves **two** major steps,
     1. **Build custom element class:** Angular provides the `createCustomElement()` function for converting an Angular component (along with its dependencies) to a custom element. The conversion process implements `NgElementConstructor` interface, and creates a constructor class which is used to produce a self-bootstrapping instance of Angular component.
     2. **Register element class with browser:** It uses `customElements.define()` JS function, to register the configured constructor and its associated custom-element tag with the browser's `CustomElementRegistry`. When the browser encounters the tag for the registered element, it uses the constructor to create a custom-element instance.
@@ -1007,14 +1007,14 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-57. ### What are the mapping rules between Angular component and custom element?
+48. ### What are the mapping rules between Angular component and custom element?
     The Component properties and logic maps directly into HTML attributes and the browser's event system. Let us describe them in two steps,
     1. The createCustomElement() API parses the component input properties with corresponding attributes for the custom element. For example, component @Input('myInputProp') converted as custom element attribute `my-input-prop`.
     2. The Component outputs are dispatched as HTML Custom Events, with the name of the custom event matching the output name. For example, component @Output() valueChanged = new EventEmitter() converted as custom element with dispatch event as "valueChanged".
 
   **[⬆ Back to Top](#table-of-contents)**
 
-58. ### How do you define typings for custom elements?
+49. ### How do you define typings for custom elements?
     You can use the `NgElement` and `WithProperties` types exported from @angular/elements.
 
     Let's see how it can be applied by comparing with Angular component.
@@ -1035,12 +1035,12 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-59. ### What are dynamic components?
+50. ### What are dynamic components?
     Dynamic components are the components in which components location in the application is not defined at build time.i.e, They are not used in any angular template. But the component is instantiated and placed in the application at runtime.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-60. ### What are the various kinds of directives?
+51. ### What are the various kinds of directives?
     There are mainly three kinds of directives,
     1. **Components** — These are directives with a template.
     2. **Structural directives** — These directives change the DOM layout by adding and removing DOM elements.
@@ -1048,7 +1048,7 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-62. ### Give an example for attribute directives?
+52. ### Give an example for attribute directives?
     Let's take simple highlighter behavior as a example directive for DOM element. You can create and apply the attribute directive using below steps,
 
     1. Create HighlightDirective class with the file name `src/app/highlight.directive.ts`. In this file, we need to import **Directive** from core library to apply the metadata and **ElementRef** in the directive's constructor to inject a reference to the host DOM element ,
@@ -1075,12 +1075,12 @@ Observables are declarative which provide support for passing messages between p
 
   **[⬆ Back to Top](#table-of-contents)**
 
-63. ### What is Angular Router?
+53. ### What is Angular Router?
     Angular Router is a mechanism in which navigation happens from one view to the next as users perform application tasks. It borrows the concepts or model of browser's application navigation.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-64. ### What is the purpose of base href tag?
+54. ### What is the purpose of base href tag?
     The routing application should add <base> element to the index.html as the first child in the <head> tag in order to indicate how to compose navigation URLs. If app folder is the application root then you can set the href value as below
 
     ```html
@@ -1090,7 +1090,7 @@ Observables are declarative which provide support for passing messages between p
   **[⬆ Back to Top](#table-of-contents)**
 	
 
-65. ### What are active router links?
+55. ### What are active router links?
     RouterLinkActive is a directive that toggles css classes for active RouterLink bindings based on the current RouterState. i.e, the Router will add CSS classes when this link is active and and remove when the link is inactive. For example, you can add them to RouterLinks as below
 
     ```html
@@ -1105,7 +1105,7 @@ Observables are declarative which provide support for passing messages between p
   **[⬆ Back to Top](#table-of-contents)**
 
 
-66. ### What is HostListener?
+56. ### What is HostListener?
 Декоратор @HostListener позволяет связать события DOM и методы директивы. В частности, в декоратор передается название события, по которому будет вызываться метод. В данном случае мы привязываем события mouseenter (наведения указателя мыши на элемент) и mouseleave (уведение указателя мыши с элемента) к методу setFontWeight(), который устанавливает стилевое свойство font-weight у элемента. Если мы наводим на элемент, то устанавливается выделение жирным. При отводе мыши выделение сбрасывается.
 
     ```typescript
@@ -1136,7 +1136,7 @@ export class BoldDirective{
   **[⬆ Back to Top](#table-of-contents)**
 	
 
-66. ### What is HostBinding?
+57. ### What is HostBinding?
     HostBinding позволяет связать обычное свойство класса со свойством элемента, к которому применяется директива
 
     ```typescript
@@ -1168,7 +1168,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-67. ### What are router links?
+58. ### What are router links?
     The RouterLink is a directive on the anchor tags give the router control over those elements. Since the navigation paths are fixed, you can assign string values to router-link directive as below,
 
     ```html
@@ -1182,7 +1182,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-68. ### What are active router links?
+59. ### What are active router links?
     RouterLinkActive is a directive that toggles css classes for active RouterLink bindings based on the current RouterState. i.e, the Router will add CSS classes when this link is active and and remove when the link is inactive. For example, you can add them to RouterLinks as below
 
     ```html
@@ -1196,7 +1196,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-69. ### What is router state?
+60. ### What is router state?
     RouterState is a tree of activated routes. Every node in this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data. You can access the current RouterState from anywhere in the application using the `Router service` and the `routerState` property.
 
     ```javascript
@@ -1214,7 +1214,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-70. ### What are router events?
+61. ### What are router events?
     During each navigation, the Router emits navigation events through the Router.events property allowing you to track the lifecycle of the route.
 
     The sequence of router events is as below,
@@ -1238,7 +1238,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-71. ### What is activated route?
+62. ### What is activated route?
     ActivatedRoute contains the information about a route associated with a component loaded in an outlet. It can also be used to traverse the router state tree. The ActivatedRoute will be injected as a router service to access the information. In the below example, you can access route path and parameters,
 
     ```javascript
@@ -1255,7 +1255,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-72. ### How do you define routes?
+63. ### How do you define routes?
      A router must be configured with a list of route definitions. You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
 
     ```javascript
@@ -1288,7 +1288,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-73. ### What is the purpose of Wildcard route?
+64. ### What is the purpose of Wildcard route?
     If the URL doesn't match any predefined routes then it causes the router to throw an error and crash the app. In this case, you can use wildcard route. A wildcard route has a path consisting of two asterisks to match every URL.
 
     For example, you can define PageNotFoundComponent for wildcard route as below
@@ -1298,24 +1298,24 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-74. ### Do I need a Routing Module always?
+65. ### Do I need a Routing Module always?
     No, the Routing Module is a design choice. You can skip routing Module (for example, AppRoutingModule) when the configuration is simple and merge the routing configuration directly into the companion module (for example, AppModule). But it is recommended when the configuration is complex and includes specialized guard and resolver services.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-75. ### What is Angular Universal?
+66. ### What is Angular Universal?
     Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under @angular/platform-server package. Recently Angular Universal is integrated with Angular CLI.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-76. ### What are different types of compilation in Angular?
+67. ### What are different types of compilation in Angular?
     Angular offers two ways to compile your application,
     1. Just-in-Time (JIT)
     2. Ahead-of-Time (AOT)
 
   **[⬆ Back to Top](#table-of-contents)**
 
-77. ### What is JIT?
+68. ### What is JIT?
     Just-in-Time (JIT) is a type of compilation that compiles your app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
 
     ```cmd
@@ -1325,7 +1325,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-78. ### What is AOT?
+69. ### What is AOT?
     Ahead-of-Time (AOT) is a type of compilation that compiles your app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
 
     ```cmd
@@ -1336,12 +1336,12 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-79. ### Why do we need compilation process?
+70. ### Why do we need compilation process?
     The Angular components and templates cannot be understood by the browser directly. Due to that Angular applications require a compilation process before they can run in a browser. For example, In AOT compilation, both Angular HTML and TypeScript code converted into efficient JavaScript code during the build phase before browser runs it.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-80. ### What are the advantages with AOT?
+71. ### What are the advantages with AOT?
     Below are the list of AOT benefits,
 
     1. **Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
@@ -1352,7 +1352,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-95. ### What is Non null type assertion operator?
+72. ### What is Non null type assertion operator?
     You can use the non-null type assertion operator to suppress the Object is possibly 'undefined' error. In the following example, the user and contact properties are always set together, implying that contact is always non-null if user is non-null. The error is suppressed in the example by using contact!.email.
     ```javascript
     @Component({
@@ -1372,7 +1372,7 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-97. ### How do you describe various dependencies in angular application?
+73. ### How do you describe various dependencies in angular application?
     The dependencies section of package.json with in an angular application can be divided as follow,
 
     1. **Angular packages:** Angular core and optional modules; their package names begin @angular/.
@@ -1381,17 +1381,17 @@ export class BoldDirective{
 
   **[⬆ Back to Top](#table-of-contents)**
 
-98. ### What is zone?
+74. ### What is zone?
     A Zone is an execution context that persists across async tasks. Angular relies on zone.js to run Angular's change detection processes when native JavaScript operations raise events
 
   **[⬆ Back to Top](#table-of-contents)**
 
-99. ### What is the purpose of common module?
+75. ### What is the purpose of common module?
     The commonly-needed services, pipes, and directives provided by @angular/common module. Apart from these HttpClientModule is available under @angular/common/http.
 
   **[⬆ Back to Top](#table-of-contents)**
 
-100. ### What is codelyzer?
+76. ### What is codelyzer?
      Codelyzer provides set of tslint rules for static code analysis of Angular TypeScript projects. ou can run the static code analyzer over web apps, NativeScript, Ionic etc. Angular CLI has support for this and it can be use as below,
      ```bash
      ng new codelyzer
@@ -1400,7 +1400,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-107. ### How to inject the dynamic script in angular?
+77. ### How to inject the dynamic script in angular?
      Using DomSanitizer we can inject the dynamic Html,Style,Script,Url.
 
      ```
@@ -1420,12 +1420,12 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 108. ### What is a service worker and its role in Angular?
+ 78. ### What is a service worker and its role in Angular?
       A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content.
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 109. ### What are the design goals of service workers?
+ 79. ### What are the design goals of service workers?
       Below are the list of design goals of Angular's service workers,
 
       1. It caches an application just like installing a native application
@@ -1436,7 +1436,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 110. ### What are the differences between AngularJS and Angular with respect to dependency injection?
+ 80. ### What are the differences between AngularJS and Angular with respect to dependency injection?
       Dependency injection is a common component in both AngularJS and Angular, but there are some key differences between the two frameworks in how it actually works.
 
         | AngularJS | Angular |
@@ -1446,7 +1446,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 111. ### What is Angular Ivy?
+ 81. ### What is Angular Ivy?
       Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.
 
       1. You can enable ivy in a new project by using the --enable-ivy flag with the ng new command
@@ -1467,7 +1467,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 112. ### What are the features included in ivy preview?
+ 82. ### What are the features included in ivy preview?
       You can expect below features with Ivy preview,
 
       1. Generated code that is easier to read and debug at runtime
@@ -1477,7 +1477,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 125. ### What are the class decorators in Angular?
+ 83. ### What are the class decorators in Angular?
       A class decorator is a decorator that appears immediately before a class definition, which declares the class to be of the given type, and provides metadata suitable to the type
 
       The following list of decorators comes under class decorators,
@@ -1490,7 +1490,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 126. ### What are class field decorators?
+ 84. ### What are class field decorators?
       The class field decorators are the statements declared immediately before a field in a class definition that defines the type of that field. Some of the examples are: @input and @output,
 
       ```javascript
@@ -1500,7 +1500,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 127. ### What is declarable in Angular?
+ 85. ### What is declarable in Angular?
       Declarable is a class type that you can add to the declarations list of an NgModule. The class types such as components, directives, and pipes comes can be declared in the module. The structure of declarations would be,
 
       ```javascript
@@ -1513,7 +1513,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 128. ### What are the restrictions on declarable classes?
+ 86. ### What are the restrictions on declarable classes?
       Below classes shouldn't be declared,
 
       1. A class that's already declared in another NgModule
@@ -1523,7 +1523,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
- 129. ### What is a DI token?
+ 87. ### What is a DI token?
       A DI token is a lookup token associated with a dependency provider in dependency injection system. The injector maintains an internal token-provider map that it references when asked for a dependency and the DI token is the key to the map. Let's take example of DI Token usage,
 
       ```javascript
@@ -1535,7 +1535,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-131. ### what is an rxjs subject in Angular
+88. ### what is an rxjs subject in Angular
      An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
      A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
@@ -1558,13 +1558,13 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-132.  ### What is Bazel tool?
+89.  ### What is Bazel tool?
       Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.
       **Note:** The Angular framework itself is built with Bazel.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-133.  ### What are the advantages of Bazel tool?
+90.  ### What are the advantages of Bazel tool?
       Below are the list of key advantages of Bazel tool,
 
       1. It creates the possibility of building your back-ends and front-ends with the same tool
@@ -1573,7 +1573,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-136. ### What is platform in Angular?
+91. ### What is platform in Angular?
      A platform is the context in which an Angular application runs. The most common platform for Angular applications is a web browser, but it can also be an operating system for a mobile device, or a web server. The runtime-platform is provided by the @angular/platform-* packages and these packages allow applications that make use of `@angular/core` and `@angular/common` to execute in different environments.
      i.e, Angular can be used as platform-independent framework in different environments, For example,
 
@@ -1582,12 +1582,12 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-137. ### What happens if I import the same module twice?
+92. ### What happens if I import the same module twice?
      If multiple modules imports the same module then angular evaluates it only once (When it encounters the module first time). It follows this condition even the module appears at any level in a hierarchy of imported NgModules.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-138. ### How do you select an element with in a component template?
+93. ### How do you select an element with in a component template?
      You can use `@ViewChild` directive to access elements in the view directly. Let's take input element with a reference,
 
      ```html
@@ -1605,7 +1605,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-139. ### How do you detect route change in Angular?
+94. ### How do you detect route change in Angular?
      In Angular7, you can subscribe to router to detect the changes. The subscription for router events would be as below,
 
      ```javascript
@@ -1614,7 +1614,7 @@ export class BoldDirective{
 
    **[⬆ Back to Top](#table-of-contents)**
 
-140. ### How do you pass headers for HTTP client?
+95. ### How do you pass headers for HTTP client?
      You can directly pass object map for http client or create HttpHeaders class to supply the headers.
 
      ```javascript
@@ -1637,7 +1637,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-142. ### Is Angular supports dynamic imports?
+96. ### Is Angular supports dynamic imports?
      Yes, Angular 8 supports dynamic imports in router configuration. i.e, You can use the import statement for lazy loading the module using `loadChildren` method and it will be understood by the IDEs(VSCode and WebStorm), webpack, etc.
      Previously, you have been written as below to lazily load the feature module. By mistake, if you have typo in the module name it still accepts the string and throws an error during build time.
      ```javascript
@@ -1650,7 +1650,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-151. ### What are the ways to trigger change detection in Angular?
+97. ### What are the ways to trigger change detection in Angular?
      You can inject either ApplicationRef or NgZone, or ChangeDetectorRef into your component and apply below specific methods to trigger change detection in Angular. i.e, There are 3 possible ways,
 
      1. **ApplicationRef.tick():** Invoke this method to explicitly process change detection and its side-effects. It check the full component tree.
@@ -1659,7 +1659,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-153. ### What are the security principles in angular?
+98. ### What are the security principles in angular?
      Below are the list of security principles in angular,
 
 		1.	You should avoid direct use of the DOM APIs.
@@ -1671,13 +1671,13 @@ export class BoldDirective{
 
 	 **[⬆ Back to Top](#table-of-contents)**
 
-158. ### What is schematic?
+99. ### What is schematic?
      It's a scaffolding library that defines how to generate or transform a programming project by creating, modifying, refactoring, or moving files and code. It defines rules that operate on a virtual file system called a tree.
 
      **[⬆ Back to Top](#table-of-contents)**
 
 
-161. ### What are the best practices for security in angular?
+100. ### What are the best practices for security in angular?
      Below are the best practices of security in angular,
 
      1. Use the latest Angular library releases
@@ -1686,17 +1686,17 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-162. ### What is Angular security model for preventing XSS attacks?
+101. ### What is Angular security model for preventing XSS attacks?
      Angular treats all values as untrusted by default. i.e, Angular sanitizes and escapes untrusted values When a value is inserted into the DOM from a template, via property, attribute, style, class binding, or interpolation.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-163. ### What is the role of template compiler for prevention of XSS attacks?
+102. ### What is the role of template compiler for prevention of XSS attacks?
      The offline template compiler prevents vulnerabilities caused by template injection, and greatly improves application performance. So it is recommended to use offline template compiler in production deployments without dynamically generating any template.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-164. ### What are the various security contexts in Angular?
+103. ### What are the various security contexts in Angular?
      Angular defines the following security contexts for sanitization,
 
      1. **HTML:** It is used when interpreting a value as HTML such as binding to innerHtml.
@@ -1706,12 +1706,12 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-165. ### What is Sanitization? Is angular supports it?
+104. ### What is Sanitization? Is angular supports it?
      **Sanitization** is the inspection of an untrusted value, turning it into a value that's safe to insert into the DOM. Yes, Angular suppports sanitization. It sanitizes untrusted values for HTML, styles, and URLs but sanitizing resource URLs isn't possible because they contain arbitrary code.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-166. ### What is the purpose of innerHTML?
+105. ### What is the purpose of innerHTML?
      The innerHtml is a property of HTML-Elements, which allows you to set it's html-content programmatically. Let's display the below html code snippet in a `<div>` tag as below using innerHTML binding,
 
      ```html
@@ -1727,7 +1727,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-167. ### What is the difference between interpolated content and innerHTML?
+106. ### What is the difference between interpolated content and innerHTML?
      The main difference between interpolated and innerHTML code is the behavior of code interpreted. Interpolated content is always escaped i.e,  HTML isn't interpreted and the browser displays angle brackets in the element's text content. Where as in innerHTML binding, the content is interpreted i.e, the browser will convert < and > characters as HTMLEntities. For example, the usage in template would be as below,
 
      ```html
@@ -1747,7 +1747,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-168. ### How do you prevent automatic sanitization?
+107. ### How do you prevent automatic sanitization?
      Sometimes the applications genuinely need to include executable code such as displaying `<iframe>` from an URL. In this case, you need to prevent automatic sanitization in Angular by saying that you inspected a value, checked how it was generated, and made sure it will always be secure. Basically it involves 2 steps,
 
      1. Inject DomSanitizer: You can inject DomSanitizer in component as parameter in constructor
@@ -1769,29 +1769,29 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-169. ### Is safe to use direct DOM API methods in terms of security?
+108. ### Is safe to use direct DOM API methods in terms of security?
      No,the built-in browser DOM APIs or methods don't automatically protect you from security vulnerabilities. In this case it is recommended to use Angular templates instead of directly interacting with DOM. If it is unavoidable then use the built-in Angular sanitization functions.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-170. ### What is DOM sanitizer?
+109. ### What is DOM sanitizer?
      `DomSanitizer` is used to help preventing Cross Site Scripting Security bugs (XSS) by sanitizing values to be safe to use in the different DOM contexts.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-171. ### How do you support server side XSS protection in Angular application?
+110. ### How do you support server side XSS protection in Angular application?
      The server-side XSS protection is supported in an angular application by using a templating language that automatically escapes values to prevent XSS vulnerabilities on the server. But don't use a templating language to generate Angular templates on the server side which creates a high risk of introducing template-injection vulnerabilities.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-172. ### Is angular prevents http level vulnerabilities?
+111. ### Is angular prevents http level vulnerabilities?
      Angular has built-in support for preventing http level vulnerabilities such as as cross-site request forgery (CSRF or XSRF) and cross-site script inclusion (XSSI). Even though these vulnerabilities need to be mitigated on server-side, Angular provides helpers to make the integration easier on the client side.
      1. HttpClient supports a token mechanism used to prevent XSRF attacks
      2. HttpClient library recognizes the convention of prefixed JSON responses(which non-executable js code with ")]}',\\n" characters) and automatically strips the string ")]}',\\n" from all responses before further parsing
 
      **[⬆ Back to Top](#table-of-contents)**
 
-173. ### What are Http Interceptors?
+112. ### What are Http Interceptors?
      Http Interceptors are part of @angular/common/http, which inspect and transform HTTP requests from your application to the server and vice-versa on HTTP responses. These interceptors can perform a variety of implicit tasks, from authentication to logging.
 
      The syntax of HttpInterceptor interface looks like as below,
@@ -1831,7 +1831,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-174. ### What are the applications of HTTP interceptors?
+113. ### What are the applications of HTTP interceptors?
      The HTTP Interceptors can be used for different variety of tasks,
 
      1. Authentication
@@ -1843,12 +1843,12 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-192. ### What is TestBed?
+114. ### What is TestBed?
      TestBed is an api for writing unit tests for Angular applications and it's libraries. Even though We still write our tests in Jasmine and run using Karma, this API provides an easier way to create components, handle injection, test asynchronous behaviour and interact with our application.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-193. ### What is protractor?
+115. ### What is protractor?
      Protractor is an end-to-end test framework for Angular and AngularJS applications. It runs tests against your application running in a real browser, interacting with it as a user would.
      ```javascript
      npm install -g protractor
@@ -1856,7 +1856,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-198. ### What is router state?
+116. ### What is router state?
      The RouteState is an interface which represents the state of the router as a tree of activated routes.
      ```javascript
      interface RouterState extends Tree {
@@ -1868,12 +1868,12 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-201. ### What is the difference between ngIf and hidden property?
+117. ### What is the difference between ngIf and hidden property?
      The main difference is that *ngIf will remove the element from the DOM, while [hidden] actually plays with the CSS style by setting `display:none`. Generally it is expensive to add and remove stuff from the DOM for frequent actions.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-202. ### What is slice pipe?
+118. ### What is slice pipe?
      The slice pipe is used to create a new Array or String containing a subset (slice) of the elements. The syntax looks like as below,
      ```javascript
      {{ value_expression | slice : start [ : end ] }}
@@ -1893,7 +1893,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-204. ### What is the purpose of ngFor trackBy?
+119. ### What is the purpose of ngFor trackBy?
      The main purpose of using *ngFor with trackBy option is performance optimization. Normally if you use NgFor with large data sets, a small change to one item by removing or adding an item, can trigger a cascade of DOM manipulations. In this case, Angular sees only a fresh list of new object references and to replace the old DOM elements with all new DOM elements. You can help Angular to track which items added or removed by providing a `trackBy` function which takes the index and the current item as arguments and needs to return the unique identifier for this item.
 
      For example, lets set trackBy to the trackByTodos() method
@@ -1909,7 +1909,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-205. ### What is the purpose of ngSwitch directive?
+120. ### What is the purpose of ngSwitch directive?
      **NgSwitch** directive is similar to JavaScript switch statement which displays one element from among several possible elements, based on a switch condition. In this case only the selected element placed into the DOM. It has been used along with `NgSwitch`, `NgSwitchCase` and `NgSwitchDefault` directives.
 
      For example, let's display the browser details based on selected browser using ngSwitch directive.
@@ -1925,7 +1925,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-207. ### What is safe navigation operator?
+121. ### What is safe navigation operator?
      The safe navigation operator(?)(or known as Elvis Operator) is used to guard against `null` and `undefined` values in property paths when you are not aware whether a path exists or not. i.e. It returns value of the object path if it exists, else it returns the null value.
 
      For example, you can access nested properties of a user profile easily without null reference errors as below,
@@ -1936,7 +1936,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-213. ### What is an entry component?
+122. ### What is an entry component?
      An entry component is any component that Angular loads imperatively(i.e, not referencing it in the template) by type. Due to this behavior, they can’t be found by the Angular compiler during compilation. These components created dynamically with `ComponentFactoryResolver`.
 
      Basically, there are two main kinds of entry components which are following -
@@ -1944,7 +1944,7 @@ export class BoldDirective{
      2. A component you specify in a route
 
      **[⬆ Back to Top](#table-of-contents)**
-214. ### What is a bootstrapped component?
+123. ### What is a bootstrapped component?
      A bootstrapped component is an entry component that Angular loads into the DOM during the bootstrap process or application launch time. Generally, this bootstrapped or root component is named as `AppComponent` in your root module using `bootstrap` property as below.
      ```js
      @NgModule({
@@ -1964,12 +1964,12 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-216. ### Is it necessary for bootstrapped component to be entry component?
+124. ### Is it necessary for bootstrapped component to be entry component?
      Yes, the bootstrapped component needs to be an entry component. This is because the bootstrapping process is an imperative process.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-217. ### What is a routed entry component?
+125. ### What is a routed entry component?
      The components referenced in router configuration are called as routed entry components. This routed entry component defined in a route definition as below,
      ```js
      const routes: Routes = [
@@ -1985,19 +1985,19 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-220. ### Is it all components generated in production build?
+126. ### Is it all components generated in production build?
      No, only the entry components and template components appears in production builds. If a component isn't an entry component and isn't found in a template, the tree shaker will throw it away. Due to this reason, make sure to add only true entry components to reduce the bundle size.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-224. ### Give few examples for NgModules?
+127. ### Give few examples for NgModules?
      The Angular core libraries and third-party libraries are available as NgModules.
      1. Angular libraries such as FormsModule, HttpClientModule, and RouterModule are NgModules.
      2. Many third-party libraries such as Material Design, Ionic, and AngularFire2 are NgModules.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-229. ### What are the steps to use declaration elements?
+128. ### What are the steps to use declaration elements?
      Below are the steps to be followed to use declaration elements.
      1. Create the element(component, directive and pipes) and export it from the file where you wrote it
      2. Import it into the appropriate module.
@@ -2006,14 +2006,14 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-230. ### What happens if browserModule used in feature module?
+129. ### What happens if browserModule used in feature module?
      If you do import `BrowserModule` into a lazy loaded feature module, Angular returns an error telling you to use `CommonModule` instead. Because BrowserModule’s providers are for the entire app so it should only be in the root module, not in feature module. Whereas Feature modules only need the common directives in CommonModule.
 
      ![ScreenShot](images/browser-module-error.gif)
 
      **[⬆ Back to Top](#table-of-contents)**
 
-231. ### What are the types of feature modules?
+130. ### What are the types of feature modules?
      Below are the five categories of feature modules,
      1. **Domain:** Deliver a user experience dedicated to a particular application domain(For example, place an order, registration etc)
      2. **Routed:** These are domain feature modules whose top components are the targets of router navigation routes.
@@ -2023,7 +2023,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-232. ### What is a provider?
+131. ### What is a provider?
      A provider is an instruction to the Dependency Injection system on how to obtain a value for a dependency(aka services created). The service can be provided using Angular CLI as below,
      ```javascript
      ng generate service my-service
@@ -2040,12 +2040,12 @@ export class BoldDirective{
      ```
      **[⬆ Back to Top](#table-of-contents)**
 
-233. ### What is the recommendation for provider scope?
+132. ### What is the recommendation for provider scope?
      You should always provide your service in the root injector unless there is a case where you want the service to be available only if you import a particular @NgModule.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-234. ### How do you restrict provider scope to a module?
+133. ### How do you restrict provider scope to a module?
      It is possible to restrict service provider scope to a specific module instead making available to entire application. There are two possible ways to do it.
      1. **Using providedIn in service:**
          ```js
@@ -2073,7 +2073,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-235. ### How do you provide a singleton service?
+134. ### How do you provide a singleton service?
      There are two possible ways to provide a singleton service.
      1. Set the providedIn property of the @Injectable() to "root". This is the preferred way(starting from Angular 6.0) of creating a singleton service since it makes your services tree-shakable.
 
@@ -2098,7 +2098,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-236. ### What are the different ways to remove duplicate service registration?
+135. ### What are the different ways to remove duplicate service registration?
      If a module defines provides and declarations then loading the module in multiple feature modules will duplicate the registration of the service. Below are the different ways to prevent this duplicate behavior.
      1. Use the providedIn syntax instead of registering the service in the module.
      2. Separate your services into their own module.
@@ -2106,12 +2106,12 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-237. ### How does forRoot method helpful to avoid duplicate router instances?
+136. ### How does forRoot method helpful to avoid duplicate router instances?
      If the `RouterModule` module didn’t have forRoot() static method then each feature module would instantiate a new Router instance, which leads to broken application due to duplicate instances. After using forRoot() method, the root application module imports `RouterModule.forRoot(...)` and gets a Router, and all feature modules import `RouterModule.forChild(...)` which does not instantiate another Router.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-238. ### What is a shared module?
+137. ### What is a shared module?
      The Shared Module is the module in which you put commonly used directives, pipes, and components into one module that is shared(import it) throughout the application.
 
      For example, the below shared module imports CommonModule, FormsModule for common directives and components, pipes and directives based on the need,
@@ -2134,19 +2134,19 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-239. ### Can I share services using modules?
+138. ### Can I share services using modules?
      No, it is not recommended to share services by importing module. i.e Import modules when you want to use directives, pipes, and components only. The best approach to get a hold of shared services is through 'Angular dependency injection' because importing a module will result in a new service instance.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-243. ### What is NgZone?
+139. ### What is NgZone?
      Angular provides a service called NgZone which creates a zone named `angular` to automatically trigger change detection when the following conditions are satisfied.
      1. When a sync or async function is executed.
      2. When there is no microTask scheduled.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-244. ### What is NoopZone?
+140. ### What is NoopZone?
      Zone is loaded/required by default in Angular applications and it helps Angular to know when to trigger the change detection. This way, it make sures developers focus on application development rather core part of Angular. You can also use Angular without Zone but the change detection need to be implemented on your own and `noop zone` need to be configured in bootstrap process.
      Let's follow the below two steps to remove zone.js,
      1. Remove the zone.js import from polyfills.ts.
@@ -2163,7 +2163,7 @@ export class BoldDirective{
          ```
      **[⬆ Back to Top](#table-of-contents)**
 
-246. ### What are the possible data update scenarios for change detection?
+141. ### What are the possible data update scenarios for change detection?
      The change detection works in the following scenarios where the data changes needs to update the application HTML.
      1. **Component initialization:** While bootstrapping the Angular application, Angular triggers the `ApplicationRef.tick()` to call change detection and View Rendering.
      2. **Event listener:**  The DOM event listener can update the data in an Angular component and trigger the change detection too.
@@ -2217,7 +2217,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-247. ### What is a zone context?
+142. ### What is a zone context?
       Execution Context is an abstract concept that holds information about the environment within the current code being executed. A zone provides an execution context that persists across asynchronous operations is called as zone context. For example, the zone context will be same in both outside and inside setTimeout callback function,
       ```js
       zone.run(() => {
@@ -2233,7 +2233,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-249. ### What are the methods of NgZone used to control change detection?
+143. ### What are the methods of NgZone used to control change detection?
      NgZone service provides a `run()` method that allows you to execute a function inside the angular zone. This function is used to execute third party APIs which are not handled by Zone and trigger change detection automatically at the correct time.
      ```js
      export class AppComponent implements OnInit {
@@ -2264,7 +2264,7 @@ export class BoldDirective{
      ```
      **[⬆ Back to Top](#table-of-contents)**
 
-252. ### How do you configure injectors with providers at different levels?
+144. ### How do you configure injectors with providers at different levels?
      You can configure injectors with providers at different levels of your application by setting a metadata value. The configuration can happen in one of three places,
      1. In the `@Injectable()` decorator for the service itself
      2. In the `@NgModule()` decorator for an NgModule
@@ -2272,7 +2272,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-253. ### Is it mandatory to use injectable on every service class?
+145. ### Is it mandatory to use injectable on every service class?
      No. The `@Injectable()` decorator is not strictly required if the class has other Angular decorators on it or does not have any dependencies. But the important thing here is any class that is going to be injected with Angular is decorated.
      i.e, If we add the decorator, the metadata `design:paramtypes` is added, and the dependency injection can do it's job. That is the exact reason to add the @Injectable() decorator on a service if this service has some dependencies itself.
      For example, Let's see the different variations of AppService in a root component,
@@ -2324,7 +2324,7 @@ export class BoldDirective{
          ```
      **[⬆ Back to Top](#table-of-contents)**
 
-254. ### What is an optional dependency?
+146. ### What is an optional dependency?
      The optional dependency is a parameter decorator to be used on constructor parameters, which marks the parameter as being an optional dependency. Due to this, the DI framework provides null if the dependency is not found.
      For example, If you don't register a logger provider anywhere, the injector sets the value of logger(or logger service) to null in the below class.
      ```js
@@ -2341,7 +2341,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-255. ### What are the types of injector hierarchies?
+147. ### What are the types of injector hierarchies?
      There are two types of injector hierarchies in Angular
 
      1. **ModuleInjector hierarchy:** It configure on a module level using an @NgModule() or @Injectable() annotation.
@@ -2349,7 +2349,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-256. ### What are reactive forms?
+148. ### What are reactive forms?
      Reactive forms is a model-driven approach for creating forms in a reactive style(form inputs changes over time). These are built around observable streams, where form inputs and values are provided as streams of input values. Let's follow the below steps to create reactive forms,
      1. Register the reactive forms module which declares reactive-form directives in your app
          ```js
@@ -2405,12 +2405,12 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-257. ### What are dynamic forms?
+150. ### What are dynamic forms?
      Dynamic forms is a pattern in which we build a form dynamically based on metadata that describes a business object model. You can create them based on reactive form API.
      **[⬆ Back to Top](#table-of-contents)**
 
 
-258. ### What are template driven forms?
+151. ### What are template driven forms?
      Template driven forms are model-driven forms where you write the logic, validations, controls etc, in the template part of the code using directives. They are suitable for simple scenarios and uses two-way binding with [(ngModel)] syntax.
      For example, you can create register form easily by following the below simple steps,
 
@@ -2486,7 +2486,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-259. ### What are the differences between reactive forms and template driven forms?
+152. ### What are the differences between reactive forms and template driven forms?
      Below are the main differences between reactive forms and template driven forms
 
      | Feature | Reactive | Template-Driven |
@@ -2501,7 +2501,7 @@ export class BoldDirective{
      **[⬆ Back to Top](#table-of-contents)**
 
 
-260. ### What are the different ways to group form controls?
+153. ### What are the different ways to group form controls?
      Reactive forms provide two ways of grouping multiple related controls.
      1. **FormGroup**: It defines a form with a fixed set of controls those can be managed together in an one object. It has same properties and methods similar to a FormControl instance.
         This FormGroup can be nested to create complex forms as below.
@@ -2635,7 +2635,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-261. ### How do you update specific properties of a form model?
+154. ### How do you update specific properties of a form model?
      You can use `patchValue()` method to update specific properties defined in the form model. For example,you can update the name and street of certain profile on click of the update button as shown below.
      ```js
      updateProfile() {
@@ -2657,7 +2657,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-262. ### What is the purpose of FormBuilder?
+155. ### What is the purpose of FormBuilder?
      FormBuilder is used as syntactic sugar for easily creating instances of a FormControl, FormGroup, or FormArray. This is helpful to reduce the amount of boilerplate needed to build complex reactive forms. It is available as an injectable helper class of the `@angular/forms` package.
 
      For example, the user profile component creation becomes easier as shown here.
@@ -2678,7 +2678,7 @@ export class BoldDirective{
      ```
      **[⬆ Back to Top](#table-of-contents)**
 
-264. ### What are the state CSS classes provided by ngModel?
+156. ### What are the state CSS classes provided by ngModel?
      The ngModel directive updates the form control with special Angular CSS classes to reflect it's state. Let's find the list of classes in a tabular format,
 
      | Form control state | If true | If false |
@@ -2689,7 +2689,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-265. ### How do you reset the form?
+157. ### How do you reset the form?
      In a model-driven form, you can reset the form just by calling the function `reset()` on our form model.
      For example, you can reset the form model on submission as follows,
      ```js
@@ -2705,7 +2705,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-266. ### What are the types of validator functions?
+158. ### What are the types of validator functions?
      In reactive forms, the validators can be either synchronous or asynchronous functions,
      1. **Sync validators:** These are the synchronous functions which take a control instance and immediately return either a set of validation errors or null. Also, these functions passed as second argument while instantiating the form control. The main use cases are simple checks like whether a field is empty, whether it exceeds a maximum length etc.
      2. **Async validators:** These are the asynchronous functions which take a control instance and return a Promise or Observable that later emits a set of validation errors or null. Also, these functions passed as second argument while instantiating the form control. The main use cases are complex validations like hitting a server to check the availability of a username or email.
@@ -2721,7 +2721,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-267. ### Can you give an example of built-in validators?
+159. ### Can you give an example of built-in validators?
      In reactive forms, you can use built-in validator like `required` and `minlength` on your input form controls. For example, the registration form can have these validators on name input field
      ```js
      this.registrationForm = new FormGroup({
@@ -2735,7 +2735,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-268. ### How do you optimize the performance of async validators?
+160. ### How do you optimize the performance of async validators?
      Since all validators run after every form value change, it creates a major impact on performance with async validators by hitting the external API on each keystroke. This situation can be avoided by delaying the form validity by changing the updateOn property from change (default) to submit or blur.
      The usage would be different based on form types,
      1. **Template-driven forms:** Set the property on `ngModelOptions` directive
@@ -2749,7 +2749,7 @@ export class BoldDirective{
 
      **[⬆ Back to Top](#table-of-contents)**
 
-270. ### What is host property in css?
+161. ### What is host property in css?
      The `:host` pseudo-class selector is used to target styles in the element that hosts the component. Since the host element is in a parent component's template, you can't reach the host element from inside the component by other means.
      For example, you can create a border for parent element as below,
      ```js
@@ -2763,7 +2763,7 @@ export class BoldDirective{
      ```
      **[⬆ Back to Top](#table-of-contents)**
 
-271. ### How do you get the current route?
+162. ### How do you get the current route?
      In Angular, there is an `url` property of router package to get the current route. You need to follow the below few steps,
 
      1. Import Router from @angular/router
@@ -2783,12 +2783,12 @@ export class BoldDirective{
 
       **[⬆ Back to Top](#table-of-contents)**
 
-272. ### What is Component Test Harnesses?
+163. ### What is Component Test Harnesses?
      A component harness is a testing API around an Angular directive or component to make tests simpler by hiding implementation details from test suites. This can be shared between unit tests, integration tests, and end-to-end tests. The idea for component harnesses comes from the **PageObject** pattern commonly used for integration testing.
 
      **[⬆ Back to Top](#table-of-contents)**
 
-273. ### What is the benefit of Automatic Inlining of Fonts?
+163. ### What is the benefit of Automatic Inlining of Fonts?
      During compile time, Angular CLI will download and inline the fonts that your application is using. This performance update speed up the first contentful paint(FCP) and this feature is enabled by default in apps built with version 11.
 
     **[⬆ Back to Top](#table-of-contents)**
