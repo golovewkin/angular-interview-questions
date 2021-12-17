@@ -37,7 +37,6 @@
 |29| [What is the difference between pure and impure pipe?](#what-is-the-difference-between-pure-and-impure-pipe)|
 |30| [What is a bootstrapping module?](#what-is-a-bootstrapping-module)|
 |31| [What is HttpClient and its benefits?](#what-is-httpclient-and-its-benefits)|
-|32| [Explain on how to use HttpClient with an example?](#explain-on-how-to-use-httpclient-with-an-example)|
 |33| [How can you read full response?](#how-can-you-read-full-response)|
 |34| [How do you perform Error handling?](#how-do-you-perform-error-handling)|
 |35| [What is RxJS?](#what-is-rxjs)|
@@ -746,54 +745,6 @@ for Example (Pure pipe)
     3. Intercept request and response
     4. Supports Observalbe APIs
     5. Supports streamlined error handling
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-37. ### Explain on how to use HttpClient with an example?
-    Below are the steps need to be followed for the usage of HttpClient.
-    1. Import HttpClient into root module:
-        ```javascript
-        import { HttpClientModule } from '@angular/common/http';
-        @NgModule({
-          imports: [
-            BrowserModule,
-            // import HttpClientModule after BrowserModule.
-            HttpClientModule,
-          ],
-          ......
-          })
-         export class AppModule {}
-        ```
-    2. Inject the HttpClient into the application:
-        Let's create a userProfileService(userprofile.service.ts) as an example. It also defines get method of HttpClient
-        ```javascript
-        import { Injectable } from '@angular/core';
-        import { HttpClient } from '@angular/common/http';
-
-        const userProfileUrl: string = 'assets/data/profile.json';
-
-        @Injectable()
-        export class UserProfileService {
-          constructor(private http: HttpClient) { }
-
-          getUserProfile() {
-            return this.http.get(this.userProfileUrl);
-          }
-        }
-        ```
-    3. Create a component for subscribing service:
-        Let's create a component called UserProfileComponent(userprofile.component.ts) which inject UserProfileService and invokes the service method,
-        ```javascript
-        fetchUserProfile() {
-          this.userProfileService.getUserProfile()
-            .subscribe((data: User) => this.user = {
-                id: data['userId'],
-                name: data['firstName'],
-                city:  data['city']
-            });
-        }
-        ```
-    Since the above service method returns an Observable which needs to be subscribed in the component.
 
   **[⬆ Back to Top](#table-of-contents)**
 
